@@ -27,7 +27,7 @@
         }
 
         ul.newstickers li {
-            float: left;
+            /* float: left; */
             display: inline-block;
             margin: 8px 60px 8px 0;
             padding: 0;
