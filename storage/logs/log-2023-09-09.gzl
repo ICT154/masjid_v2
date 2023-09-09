@@ -1,0 +1,10 @@
+ERROR - 2023-09-09 04:44:07 --> Severity: error --> Exception: Call to undefined method Kaskas::getSaldoMingguKemarin() C:\xampp_74\htdocs\masjid_v2\application\controllers\Welcome.php 42
+ERROR - 2023-09-09 04:49:11 --> Severity: Notice --> Array to string conversion C:\xampp_74\htdocs\masjid_v2\system\database\DB_query_builder.php 2443
+ERROR - 2023-09-09 04:49:11 --> Query error: Unknown column 'Array' in 'where clause' - Invalid query: SELECT *
+FROM `t_saldo_kas`
+WHERE `tanggal` = Array
+ORDER BY `tanggal` DESC
+ LIMIT 1
+ERROR - 2023-09-09 05:00:11 --> 404 Page Not Found: Storage/assets
+ERROR - 2023-09-09 06:37:13 --> Severity: error --> Exception: Call to undefined method Kaskas::getSaldoMingguanRange() C:\xampp_74\htdocs\masjid_v2\application\controllers\Welcome.php 57
+ERROR - 2023-09-09 06:39:47 --> Severity: error --> Exception: Too few arguments to function Kaskas::getSaldoMingguanRange(), 2 passed in C:\xampp_74\htdocs\masjid_v2\application\controllers\Welcome.php on line 57 and exactly 3 expected C:\xampp_74\htdocs\masjid_v2\application\models\Back\Kaskas.php 9

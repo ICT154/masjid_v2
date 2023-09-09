@@ -1,0 +1,15 @@
+ERROR - 2023-09-08 10:21:33 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Kas.php 42
+ERROR - 2023-09-08 10:21:33 --> Severity: Warning --> A non-numeric value encountered C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Kas.php 42
+ERROR - 2023-09-08 10:35:29 --> 404 Page Not Found: Jadwal-imam-khotib/index
+ERROR - 2023-09-08 10:39:16 --> Severity: Notice --> Undefined property: JadwalImam::$KAS C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\JadwalImam.php 13
+ERROR - 2023-09-08 10:39:16 --> Severity: error --> Exception: Call to a member function get_total_pemasukan() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\JadwalImam.php 13
+ERROR - 2023-09-08 10:39:17 --> Severity: Notice --> Undefined property: JadwalImam::$KAS C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\JadwalImam.php 13
+ERROR - 2023-09-08 10:39:17 --> Severity: error --> Exception: Call to a member function get_total_pemasukan() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\JadwalImam.php 13
+ERROR - 2023-09-08 10:43:30 --> Severity: Notice --> Undefined variable: DataSaldo C:\xampp_74\htdocs\masjid_v2\application\views\back\jadwal_imam\index.php 36
+ERROR - 2023-09-08 10:43:30 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\back\jadwal_imam\index.php 36
+ERROR - 2023-09-08 10:43:47 --> Severity: Notice --> Undefined variable: DataSaldo C:\xampp_74\htdocs\masjid_v2\application\views\back\jadwal_imam\index.php 36
+ERROR - 2023-09-08 10:43:47 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\back\jadwal_imam\index.php 36
+ERROR - 2023-09-08 10:55:32 --> Query error: Unknown column 'khotib' in 'field list' - Invalid query: INSERT INTO `t_jadwal_imam_khatib` (`id_jadwal`, `tanggal`, `imam`, `khotib`, `status`, `date_g`) VALUES ('JAD2MWEEE', '2023-09-15', 'Qui temporibus vitae', 'Modi ut ea odio nesc', '1', '2023-09-08 10:55:32')
+ERROR - 2023-09-08 10:57:19 --> Severity: error --> Exception: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) C:\xampp_74\htdocs\masjid_v2\application\models\Back\Imam.php 19
+ERROR - 2023-09-08 10:58:56 --> Severity: Notice --> Undefined variable: DataImam C:\xampp_74\htdocs\masjid_v2\application\views\back\jadwal_imam\index.php 35
+ERROR - 2023-09-08 10:58:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\back\jadwal_imam\index.php 35
