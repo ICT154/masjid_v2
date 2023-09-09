@@ -41,6 +41,7 @@ class Welcome extends CI_Controller
 			'GetImamKhatibSebelumDanSelanjut' => $this->jadwalSholat->getImamKhatib($this->GZL->getPreviousAndNextFriday(date("Y-m-d"))['next_friday']),
 			// 'GetSaldoMingguKemarin' => $this->KAS->getSaldoMingguan($this->jadwalSholat->getImamKhatib($this->GZL->getPreviousAndNextFriday(date("Y-m-d"))['previous_friday'])),
 			// 'GetSaldoMingguIni' => $this->KAS->getSaldoMingguan($this->GZL->getFridayFromDate(date("Y-m-d")))
+			'DataRunningText' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_running_text')->row_array(),
 		);
 
 		if ($arrayName['JumatSekarang'] == $arrayName['JumatSebelumDanSelanjut']['next_friday']) {

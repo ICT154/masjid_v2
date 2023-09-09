@@ -8,3 +8,11 @@ ORDER BY `tanggal` DESC
 ERROR - 2023-09-09 05:00:11 --> 404 Page Not Found: Storage/assets
 ERROR - 2023-09-09 06:37:13 --> Severity: error --> Exception: Call to undefined method Kaskas::getSaldoMingguanRange() C:\xampp_74\htdocs\masjid_v2\application\controllers\Welcome.php 57
 ERROR - 2023-09-09 06:39:47 --> Severity: error --> Exception: Too few arguments to function Kaskas::getSaldoMingguanRange(), 2 passed in C:\xampp_74\htdocs\masjid_v2\application\controllers\Welcome.php on line 57 and exactly 3 expected C:\xampp_74\htdocs\masjid_v2\application\models\Back\Kaskas.php 9
+ERROR - 2023-09-09 07:45:44 --> Severity: Notice --> Undefined variable: DataImam C:\xampp_74\htdocs\masjid_v2\application\views\back\run\index.php 35
+ERROR - 2023-09-09 07:45:44 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\back\run\index.php 35
+ERROR - 2023-09-09 07:55:02 --> Severity: Notice --> Undefined property: Runningteks::$GZL C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Runningteks.php 12
+ERROR - 2023-09-09 07:55:02 --> Severity: error --> Exception: Call to a member function show_msg() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Runningteks.php 12
+ERROR - 2023-09-09 07:57:15 --> Severity: Notice --> Undefined variable: DataRunningText C:\xampp_74\htdocs\masjid_v2\application\views\back\run\index.php 14
+ERROR - 2023-09-09 07:57:15 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\masjid_v2\application\views\back\run\index.php 14
+ERROR - 2023-09-09 07:57:56 --> Severity: Notice --> Undefined variable: DataRunningText C:\xampp_74\htdocs\masjid_v2\application\views\back\run\index.php 14
+ERROR - 2023-09-09 07:57:56 --> Severity: Notice --> Trying to access array offset on value of type null C:\xampp_74\htdocs\masjid_v2\application\views\back\run\index.php 14

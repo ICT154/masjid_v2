@@ -1,7 +1,7 @@
 <div id="masjidnuruliman" style="background-image: url('https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg');  background-repeat: no-repeat;  background-size: cover;">
     <div class="wm__ticker">
         <div class="acmeticker-wrap mb-3" style="position: relative;">
-            <marquee behavior="" direction="" class="mt-3">Selamat Datang di Masjid Jami' As Salaam Pondok Melati Indah</marquee>
+            <marquee behavior="" direction="" class="mt-3"><?= $DataRunningText['isi'] ?></marquee>
 
         </div>
     </div>

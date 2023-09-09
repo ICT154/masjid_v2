@@ -71,3 +71,7 @@ $route['jadwal-imam-khotib'] = 'back/jadwalimam';
 $route['tambah-imam'] = 'back/jadwalimam/tambah_imam';
 $route['delete-imam'] = 'back/jadwalimam/delete_imam';
 ///////////////////////////////////////////////////////////
+
+//////////// RUNNING TEKS ///////////////////////////
+$route['running-teks-berita'] = 'back/runningteks';
+$route['running-text-sv'] = 'back/runningteks/running_text_sv';
