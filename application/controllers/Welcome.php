@@ -42,6 +42,7 @@ class Welcome extends CI_Controller
 			// 'GetSaldoMingguKemarin' => $this->KAS->getSaldoMingguan($this->jadwalSholat->getImamKhatib($this->GZL->getPreviousAndNextFriday(date("Y-m-d"))['previous_friday'])),
 			// 'GetSaldoMingguIni' => $this->KAS->getSaldoMingguan($this->GZL->getFridayFromDate(date("Y-m-d")))
 			'DataRunningText' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_running_text')->row_array(),
+			'DataVideo' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_video_display')->row_array(),
 		);
 
 		if ($arrayName['JumatSekarang'] == $arrayName['JumatSebelumDanSelanjut']['next_friday']) {
@@ -61,7 +62,8 @@ class Welcome extends CI_Controller
 
 
 		$this->load->view('templates/header', $arrayName);
-		$this->load->view('display/index');
+		// $this->load->view('display/index');
+		$this->load->view('display/index_v2');
 		$this->load->view('templates/footer');
 		$this->load->view('display/index-js');
 	}

@@ -1,97 +1,99 @@
-<div id="masjidnuruliman" style="background-image: url('https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg');  background-repeat: no-repeat;  background-size: cover;">
+<div id="masjidnuruliman">
     <div class="wm__ticker">
         <div class="acmeticker-wrap mb-3" style="position: relative;">
-            <marquee behavior="" direction="" class="mt-3"><?= $DataRunningText['isi'] ?></marquee>
+            <marquee behavior="" direction="" class="mt-3"></marquee>
 
         </div>
     </div>
-    <section class="navbar navbar-expand-lg navbar-light">
+    <div class="masjid_nurul" style="background-image: url('https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg');  background-repeat: no-repeat;  background-size: cover;">
+        <section class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo di sebelah kiri -->
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="https://masjidassalaampmi.com/wp-content/uploads/2023/03/cropped-Masjid-Jami-As-Salaam-3.png" alt="Logo" width="50"> -->
+                </a>
+
+                <!-- Tombol toggle untuk tampilan mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Daftar menu di sebelah kanan -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jadwal Sholat Di Bandung
+                                <b> ( <?php echo $JadwalSholat['jadwal']['data']['tanggal']; ?> )</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="jam"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-success" onclick="openFullscreen()"><i class="fa-solid fa-expand"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-success" onclick="modalSetting()"><i class="fa-solid fa-gear"></i></button>
+        </section>
+
         <div class="container">
-            <!-- Logo di sebelah kiri -->
-            <a class="navbar-brand" href="#">
-                <!-- <img src="https://masjidassalaampmi.com/wp-content/uploads/2023/03/cropped-Masjid-Jami-As-Salaam-3.png" alt="Logo" width="50"> -->
-            </a>
 
-            <!-- Tombol toggle untuk tampilan mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="row">
+                <div class="col-1">
+                    <img src="<?= base_url("storage/assets/images/7112-removebg-preview.png") ?>" width="150px;" style='margin-left: -113px;margin-top: -53px;'>
+                </div>
+                <div class="col" style="margin-left: -35px; color:#1a9c3d;">
 
-            <!-- Daftar menu di sebelah kanan -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Jadwal Sholat Di Bandung
-                            <b> ( <?php echo $JadwalSholat['jadwal']['data']['tanggal']; ?> )</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="jam"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <button type="button" class="btn btn-sm btn-outline-success" onclick="openFullscreen()"><i class="fa-solid fa-expand"></i></button>
-    </section>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-1">
-                <img src="<?= base_url("storage/assets/images/7112-removebg-preview.png") ?>" width="150px;" style='margin-left: -113px;margin-top: -53px;'>
-            </div>
-            <div class="col" style="margin-left: -35px; color:#14c743;">
-
-                <h2>MASJID NURUL IMAN </h2><br>
-                <h5 style="margin-top: -30px; color:#ffcc00;">RS. BHAYANGKARA SARTIKA ASIH</h5>
-            </div>
-            <div class="col-1"></div>
-            <div class="col-6">
-                <div class="card container shadow-lg" style="bottom: 15px;z-index: 999;left: 85px;">
-                    <div class="row text-center mt-3 mb-3 container">
-                        <div class="col bg-light">
-                            SHUBUH
-                            <span style="color: #7bae91;">
-                                <?php echo $JadwalSholat['jadwal']['data']['subuh']; ?>
-                            </span>
-                        </div>
-                        <div class="col">
-                            TERBIT
-                            <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['terbit']; ?></span>
-                        </div>
-                        <div class="col bg-light">
-                            DZUHUR
-                            <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['dzuhur']; ?></span>
-                        </div>
-                        <div class="col">
-                            ASHAR
-                            <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['ashar']; ?></span>
-                        </div>
-                        <div class="col bg-light">
-                            MAGRIB
-                            <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['maghrib']; ?></span>
-                        </div>
-                        <div class="col">
-                            ISYA
-                            <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['isya']; ?></span>
+                    <h2>MASJID NURUL IMAN </h2><br>
+                    <h5 style="margin-top: -30px; color:tomat">RS. BHAYANGKARA SARTIKA ASIH</h5>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6">
+                    <div class="card container shadow-lg" style="bottom: 15px;z-index: 999;left: 85px;">
+                        <div class="row text-center mt-3 mb-3 container">
+                            <div class="col bg-light">
+                                SHUBUH
+                                <span style="color: #7bae91;">
+                                    <?php echo $JadwalSholat['jadwal']['data']['subuh']; ?>
+                                </span>
+                            </div>
+                            <div class="col">
+                                TERBIT
+                                <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['terbit']; ?></span>
+                            </div>
+                            <div class="col bg-light">
+                                DZUHUR
+                                <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['dzuhur']; ?></span>
+                            </div>
+                            <div class="col">
+                                ASHAR
+                                <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['ashar']; ?></span>
+                            </div>
+                            <div class="col bg-light">
+                                MAGRIB
+                                <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['maghrib']; ?></span>
+                            </div>
+                            <div class="col">
+                                ISYA
+                                <span style="color: #7bae91;"> <?php echo $JadwalSholat['jadwal']['data']['isya']; ?></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <section class='text-light ' style="background-color: #7bae91; height:500px;">
+    <section class='text-light ' style="background-color: #7bae91; height:100%; z-index:999;">
         <div class="container-sm ">
 
             <div class="row mt-1 ">
@@ -129,7 +131,7 @@
                     }
 
                     ?>
-                    <div class="card container mt-3  shadow-lg text-center " style="margin-left: -100px; background-image: url('https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg')">
+                    <div class="card container mt-3  shadow-lg text-center " style="margin-left: -100px; " id="card-imam">
                         <h3 class="mt-3">Minggu Ini ( <?= $this->GZL->tgl_indo($JumatSekarang) ?> )</h3>
                         <h2 class="mt-3">Imam : <?= $value11  ?></h2>
                         <h2 class="">Khotib : <?= $value22 ?></h2>
@@ -138,7 +140,7 @@
                     <h2 class="mt-3">Imam : <?= $value1  ?></h2>
                     <h2 class="">Khotib : <?= $value2 ?></h2> -->
                     </div>
-                    <div class="card container mt-3  shadow-lg text-left " style="margin-left: -100px; background-image: url('https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg')">
+                    <div class="card container mt-3  shadow-lg text-left " style="margin-left: -100px;" id="card-kas">
                         <div class="mt-3">
                             <h5> KAS MASJID </h5>
 
@@ -190,5 +192,9 @@
                 </div>
             </div>
         </div>
+        <h1 style=" background-color:#7bae91; color:tomato;">
+            <marquee behavior="" direction="" class="mt-3"><?= $DataRunningText['isi'] ?></marquee>
+        </h1>
     </section>
+
 </div>

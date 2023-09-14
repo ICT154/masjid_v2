@@ -75,6 +75,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-light" href="<?= base_url("running-teks-berita") ?>">Running Text Berita</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="<?= base_url("video-setting") ?>">Video Display</a>
+                    </li>
                 </ul>
             </div>
         </div>

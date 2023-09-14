@@ -1,0 +1,11 @@
+ERROR - 2023-09-14 04:56:22 --> Severity: Notice --> Undefined variable: value11 C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v2.php 104
+ERROR - 2023-09-14 04:56:22 --> Severity: Notice --> Undefined variable: value22 C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v2.php 105
+ERROR - 2023-09-14 04:56:22 --> Severity: Notice --> Undefined variable: value1 C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v2.php 108
+ERROR - 2023-09-14 04:56:22 --> Severity: Notice --> Undefined variable: value2 C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v2.php 109
+ERROR - 2023-09-14 06:24:48 --> 404 Page Not Found: Video-setting/index
+ERROR - 2023-09-14 06:24:51 --> 404 Page Not Found: Video-setting/index
+ERROR - 2023-09-14 06:24:58 --> 404 Page Not Found: Video-setting/index
+ERROR - 2023-09-14 06:35:16 --> 404 Page Not Found: Video_upload_setting/index
+ERROR - 2023-09-14 06:36:40 --> 404 Page Not Found: Video_upload_setting/index
+ERROR - 2023-09-14 06:37:27 --> Severity: Notice --> Undefined property: Videodisplay::$GZL C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Videodisplay.php 32
+ERROR - 2023-09-14 06:37:27 --> Severity: error --> Exception: Call to a member function show_msg() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Videodisplay.php 32

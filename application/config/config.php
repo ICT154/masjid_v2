@@ -475,7 +475,8 @@ $config['csrf_exclude_uris'] = array(
     'data-tiket/tabel',
     'ubah-saldo',
     'delete-saldo',
-    'delete-imam'
+    'delete-imam',
+    'video-upload-setting'
 );
 
 /*

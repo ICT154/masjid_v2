@@ -75,3 +75,10 @@ $route['delete-imam'] = 'back/jadwalimam/delete_imam';
 //////////// RUNNING TEKS ///////////////////////////
 $route['running-teks-berita'] = 'back/runningteks';
 $route['running-text-sv'] = 'back/runningteks/running_text_sv';
+/////////////////////////////////////////////////////
+
+
+/////////////////// VIDEO DISPLAY ///////////////////
+$route['video-setting'] = 'back/videodisplay';
+$route['video-upload-setting'] = 'back/videodisplay/video_upload_setting';
+/////////////////////////////////////////////////////
