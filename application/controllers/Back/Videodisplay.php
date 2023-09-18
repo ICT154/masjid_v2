@@ -15,7 +15,7 @@ class Videodisplay extends CI_Controller
     public function index()
     {
         $data = array(
-            'DataRunningText' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_running_text')->row_array(),
+            'DataVideo' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_video_display')->row_array(),
         );
 
         $this->load->view('templates/header_auth', $data);

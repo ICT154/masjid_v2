@@ -141,7 +141,7 @@
 
                     </th>
                     <th rowspan="2" id="card-video">
-                        <video loop="" autoplay="" muted="" id="vid00" class="kanan0" style="height: 470px;">
+                        <video loop="" autoplay="" muted="" id="vid00" class="kanan0" style="height: 270px;">
                             <source src="<?= base_url("storage/uploads_docs/" . $DataVideo['nama_file']) ?>" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
