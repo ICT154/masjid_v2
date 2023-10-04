@@ -53,32 +53,32 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['auth'] = 'back/auth';
+$route['auth'] = 'Back/auth';
 
 ////////////////// UANG SALDO KAS MASJID //////////////////
-$route['uang-kas'] = 'back/kas/uang_kas';
-$route['pemasukan-kas-sv'] = 'back/kas/pemasukan_kas_sv';
-$route['pengeluaran-kas-sv'] = 'back/kas/pengeluaran_kas_sv';
-$route['ubah-saldo'] = 'back/kas/ubah_saldo';
-$route['ubah-saldo-sv'] = 'back/kas/ubah_saldo_sv';
-$route['delete-saldo'] = 'back/kas/delete_saldo';
+$route['uang-kas'] = 'Back/kas/uang_kas';
+$route['pemasukan-kas-sv'] = 'Back/kas/pemasukan_kas_sv';
+$route['pengeluaran-kas-sv'] = 'Back/kas/pengeluaran_kas_sv';
+$route['ubah-saldo'] = 'Back/kas/ubah_saldo';
+$route['ubah-saldo-sv'] = 'Back/kas/ubah_saldo_sv';
+$route['delete-saldo'] = 'Back/kas/delete_saldo';
 //////////////////////////////////////////////////////////
 
 
 
 //////////////////// JADWAL KHOTIB /////////////////////////
-$route['jadwal-imam-khotib'] = 'back/jadwalimam';
-$route['tambah-imam'] = 'back/jadwalimam/tambah_imam';
-$route['delete-imam'] = 'back/jadwalimam/delete_imam';
+$route['jadwal-imam-khotib'] = 'Back/Jadwal_imam';
+$route['tambah-imam'] = 'Back/Jadwal_imam/tambah_imam';
+$route['delete-imam'] = 'Back/Jadwal_imam/delete_imam';
 ///////////////////////////////////////////////////////////
 
 //////////// RUNNING TEKS ///////////////////////////
-$route['running-teks-berita'] = 'back/runningteks';
-$route['running-text-sv'] = 'back/runningteks/running_text_sv';
+$route['running-teks-berita'] = 'Back/runningteks';
+$route['running-text-sv'] = 'Back/runningteks/running_text_sv';
 /////////////////////////////////////////////////////
 
 
 /////////////////// VIDEO DISPLAY ///////////////////
-$route['video-setting'] = 'back/videodisplay';
-$route['video-upload-setting'] = 'back/videodisplay/video_upload_setting';
+$route['video-setting'] = 'Back/videodisplay';
+$route['video-upload-setting'] = 'Back/videodisplay/video_upload_setting';
 /////////////////////////////////////////////////////

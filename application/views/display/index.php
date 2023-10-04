@@ -131,7 +131,7 @@
                     }
 
                     ?>
-                    <div class="card container mt-3  shadow-lg text-center " style="margin-left: -100px; " id="card-imam">
+                    <div class="card container mt-3  shadow-lg text-left " style="margin-left: -100px; " id="card-imam">
                         <h3 class="mt-3">Minggu Ini ( <?= $this->GZL->tgl_indo($JumatSekarang) ?> )</h3>
                         <h2 class="mt-3">Imam : <?= $value11  ?></h2>
                         <h2 class="">Khotib : <?= $value22 ?></h2>

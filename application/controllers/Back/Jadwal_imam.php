@@ -4,7 +4,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class JadwalImam extends CI_Controller
+class Jadwal_imam extends CI_Controller
 {
     public function __construct()
     {

@@ -76,7 +76,7 @@
                             <label class="col-form-label">Tanggal</label>
                         </div>
                         <div class="col-auto">
-                            <input type="date" id="TanggalPemasukan" name="TanggalPemasukan" class="form-control">
+                            <input type="date" id="TanggalPengeluaran" name="TanggalPengeluaran" class="form-control">
                         </div>
                     </div>
 

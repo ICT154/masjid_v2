@@ -80,12 +80,13 @@ class Kas extends CI_Controller
         $nominal_pengeluaran = str_replace("Rp. ", "", $this->input->post('NominalPengeluaran'));
         $nominal_pengeluaran = str_replace(".", "", $nominal_pengeluaran);
         $nominal_pengeluaran = str_replace(",", ".", $nominal_pengeluaran);
+        $tanggal_pengeluaran = $this->input->post('TanggalPengeluaran');
 
         $get_data_last = $this->KAS->get_last_saldo();
 
         $data = [
             'id_saldo_kas' => "" . $this->GZL->gen_code("6", "KAS"),
-            'tanggal' => date("Y-m-d H:i:s"),
+            'tanggal' => $tanggal_pengeluaran,
             'keluar' => $nominal_pengeluaran,
             'ket' => $this->input->post('KetPemasukan'),
             'sisa' => $get_data_last - $nominal_pengeluaran,
@@ -119,12 +120,13 @@ class Kas extends CI_Controller
         $nominal_pemasukan = str_replace("Rp. ", "", $this->input->post('NominalPemasukan'));
         $nominal_pemasukan = str_replace(".", "", $nominal_pemasukan);
         $nominal_pemasukan = str_replace(",", ".", $nominal_pemasukan);
+        $tanggal_pemasukan = $this->input->post('TanggalPemasukan');
 
         $get_data_last = $this->KAS->get_last_saldo();
 
         $data = [
             'id_saldo_kas' => "" . $this->GZL->gen_code("6", "KAS"),
-            'tanggal' => date("Y-m-d H:i:s"),
+            'tanggal' => $tanggal_pemasukan,
             'masuk' => $nominal_pemasukan,
             'ket' => $this->input->post('KetPemasukan'),
             'sisa' => $nominal_pemasukan + $get_data_last,

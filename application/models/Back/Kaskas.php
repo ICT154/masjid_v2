@@ -37,7 +37,7 @@ class Kaskas extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('t_saldo_kas');
-        $this->db->where('tanggal', $tanggal);
+        $this->db->where('tanggal <=', $tanggal);
         $this->db->order_by('tanggal', 'desc');
         $this->db->limit(1);
         $cek =  $this->db->get();

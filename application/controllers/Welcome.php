@@ -63,7 +63,7 @@ class Welcome extends CI_Controller
 
 		$this->load->view('templates/header', $arrayName);
 		// $this->load->view('display/index');
-		$this->load->view('display/index_v2');
+		$this->load->view('display/index_v3');
 		$this->load->view('templates/footer');
 		$this->load->view('display/index-js');
 	}

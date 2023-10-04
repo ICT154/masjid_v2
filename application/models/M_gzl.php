@@ -14,6 +14,34 @@ class M_gzl extends CI_Model
     {
     }
 
+
+
+
+    function formatTanggalIndo($tanggal)
+    {
+        // Konversi tanggal ke format yang diinginkan
+        // / Daftar nama hari dalam bahasa Indonesia
+        $namaHari = array(
+            'Sunday' => 'Minggu',
+            'Monday' => 'Senin',
+            'Tuesday' => 'Selasa',
+            'Wednesday' => 'Rabu',
+            'Thursday' => 'Kamis',
+            'Friday' => 'Jumat',
+            'Saturday' => 'Sabtu'
+        );
+
+        // Konversi tanggal ke format yang diinginkan
+        $tanggal = date('l, d-m-Y', strtotime($tanggal));
+
+        // Ganti nama hari dalam bahasa Indonesia
+        foreach ($namaHari as $hariInggris => $hariIndonesia) {
+            $tanggal = str_replace($hariInggris, $hariIndonesia, $tanggal);
+        }
+
+        return $tanggal;
+    }
+
     function show_msg($tipe, $msg)
     {
         $this->session->set_flashdata('message', '

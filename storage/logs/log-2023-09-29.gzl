@@ -1,0 +1,3 @@
+ERROR - 2023-09-29 11:14:25 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) C:\xampp_74\htdocs\masjid_v2\system\database\drivers\mysqli\mysqli_driver.php 211
+ERROR - 2023-09-29 11:14:25 --> Unable to connect to the database
+ERROR - 2023-09-29 11:14:26 --> Severity: error --> Exception: Call to a member function real_escape_string() on bool C:\xampp_74\htdocs\masjid_v2\system\database\drivers\mysqli\mysqli_driver.php 401

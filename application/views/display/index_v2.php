@@ -131,10 +131,83 @@
             ?>
             <table class="mt-3" style="width:100%; margin-left: 40px;">
                 <tr>
-                    <th id="card-imam" style="background-color: white; margin-top:10px; color:black; border-radius:25px; text-align:center; margin-left: -100px; width:auto;">
+                    <th id="card-imam" style="background-color: white; margin-top:10px; color:black; border-radius:25px;  margin-left: -100px; width:auto; padding:25px;">
+
+
                         Minggu Ini <br> ( <?= $this->GZL->tgl_indo($JumatSekarang) ?> ) <br>
-                        Imam : <?= $value11  ?> <br>
-                        Khotib : <?= $value22 ?> <br>
+
+                        <div class="row">
+                            <div class="col">
+                                Imam
+                            </div>
+                            <div class="col-1">
+                                :
+                            </div>
+                            <div class="col">
+                                <?= $value11  ?>
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col">
+                                Khotib
+                            </div>
+                            <div class="col-1">
+                                :
+                            </div>
+                            <div class="col">
+                                <?= $value22 ?>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row mt-3">
+                            <div class="col">
+                                SALDO SEBELUMNYA
+                            </div>
+                            <div class="col-1">
+                                :
+                            </div>
+                            <div class="col">
+                                Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarin, 0, ',', ".") ?>
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col">
+                                PENERIMAAN
+                            </div>
+                            <div class="col-1">
+                                :
+                            </div>
+                            <div class="col">
+                                Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPemasukan, 0, ',', ".") ?>
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col">
+                                PENGELUARAN
+                            </div>
+                            <div class="col-1">
+                                :
+                            </div>
+                            <div class="col">
+                                Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPengeluaran, 0, ',', ".") ?>
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col">
+                                SALDO AKHIR
+                            </div>
+                            <div class="col-1">
+                                :
+                            </div>
+                            <div class="col">
+                                Rp. <?= $this->GZL->number_format($GetSaldoMingguIni, 0, ',', ".") ?>
+                            </div>
+                        </div>
+
+
+
 
                     </th>
                     <th width='160'>
@@ -147,8 +220,8 @@
                         </video>
                     </th>
                 </tr>
-                <tr>
-                    <th id="card-kas" style="background-color: white; margin-top:10px; color:black; border-radius:25px; text-align:center; margin-left: -100px; width:auto;">
+                <!-- <tr>
+                    <th id="card-kas" style="background-color: white; margin-top:10px; color:black; border-radius:25px;  margin-left: -100px; width:auto;">
                         SALDO SEBELUMNYA : Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarin, 0, ',', ".") ?> <br>
                         PENERIMAAN : Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPemasukan, 0, ',', ".") ?> <br>
                         PENGELUARAN : Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPengeluaran, 0, ',', ".") ?> <br>
@@ -158,7 +231,7 @@
 
                     </th>
 
-                </tr>
+                </tr> -->
             </table>
 
 
