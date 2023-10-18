@@ -27,11 +27,16 @@ class Welcome extends CI_Controller
 		$this->load->model('Api/JadwalSholat_model', 'jadwalSholat');
 		$this->load->model('M_gzl', 'GZL');
 		$this->load->model('Back/Kaskas', 'KAS');
+		$this->load->model('M_jumat', 'JUMAT');
 	}
 
 
 	public function index()
 	{
+
+		$jumatsekarang =  $this->GZL->getFridayFromDate(date("Y-m-d"));
+		$data_jadwal_bulanan = $this->db->where('tanggal', $jumatsekarang)->get("t_jadwal_bulanan", 1)->row_array();
+		$datax = $this->JUMAT->get_data_by_id($data_jadwal_bulanan['id_jadwal_bulanan']);
 
 		$arrayName = array(
 			'JadwalSholat' => $this->jadwalSholat->getJadwalSholat(),
@@ -43,6 +48,8 @@ class Welcome extends CI_Controller
 			// 'GetSaldoMingguIni' => $this->KAS->getSaldoMingguan($this->GZL->getFridayFromDate(date("Y-m-d")))
 			'DataRunningText' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_running_text')->row_array(),
 			'DataVideo' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_video_display')->row_array(),
+			'dataBackground' => $this->JUMAT->get_data_background(),
+			'datahadist' => $this->JUMAT->get_data_hadist_by_id($datax['id_hadist_quote']),
 		);
 
 		if ($arrayName['JumatSekarang'] == $arrayName['JumatSebelumDanSelanjut']['next_friday']) {
@@ -61,10 +68,10 @@ class Welcome extends CI_Controller
 
 
 
-		$this->load->view('templates/header', $arrayName);
+		// $this->load->view('templates/header', $arrayName);
 		// $this->load->view('display/index');
-		$this->load->view('display/index_v3');
-		$this->load->view('templates/footer');
-		$this->load->view('display/index-js');
+		$this->load->view('display/index_v4', $arrayName);
+		// $this->load->view('templates/footer');
+		// $this->load->view('display/index-js');
 	}
 }

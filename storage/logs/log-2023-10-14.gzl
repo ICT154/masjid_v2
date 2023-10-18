@@ -1,0 +1,124 @@
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> file_get_contents(../db/database.json): failed to open stream: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 9
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> scandir(logo/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> scandir(logo/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> array_values() expects parameter 1 to be array, null given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 28
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> scandir(wallpaper/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> scandir(wallpaper/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 36
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 115
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 141
+ERROR - 2023-10-14 05:46:57 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 234
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Js/bootstrap.min.js
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Js/moment-with-locales.js
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Css/bootstrap.min.css
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Css/style.css
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Css/font-awesome.min.css
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Js/jquery-3.4.1.min.js
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Js/PrayTimes.js
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Js/jquery.marquee.js
+ERROR - 2023-10-14 05:46:58 --> 404 Page Not Found: Logo/index
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> file_get_contents(../db/database.json): failed to open stream: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 9
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> scandir(logo/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> scandir(logo/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> array_values() expects parameter 1 to be array, null given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 28
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> scandir(wallpaper/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> scandir(wallpaper/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 36
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 115
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 141
+ERROR - 2023-10-14 05:48:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 234
+ERROR - 2023-10-14 05:48:16 --> 404 Page Not Found: Js/moment-with-locales.js
+ERROR - 2023-10-14 05:48:16 --> 404 Page Not Found: Js/jquery.marquee.js
+ERROR - 2023-10-14 05:48:16 --> 404 Page Not Found: Js/bootstrap.min.js
+ERROR - 2023-10-14 05:48:16 --> 404 Page Not Found: Js/jquery-3.4.1.min.js
+ERROR - 2023-10-14 05:48:16 --> 404 Page Not Found: Logo/index
+ERROR - 2023-10-14 05:48:16 --> 404 Page Not Found: Js/PrayTimes.js
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> file_get_contents(../db/database.json): failed to open stream: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 9
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> scandir(logo/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> scandir(logo/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> array_values() expects parameter 1 to be array, null given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 28
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> scandir(wallpaper/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> scandir(wallpaper/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 36
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 115
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 141
+ERROR - 2023-10-14 05:48:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 234
+ERROR - 2023-10-14 05:48:56 --> 404 Page Not Found: Logo/index
+ERROR - 2023-10-14 05:49:04 --> 404 Page Not Found: Storage/assets_v4
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> file_get_contents(http://localhost/masjid_v2/storage/assets_v4//db/database.json): failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden
+ C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 9
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> scandir(logo/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> scandir(logo/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> array_values() expects parameter 1 to be array, null given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 28
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> scandir(wallpaper/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> scandir(wallpaper/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 36
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 115
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 141
+ERROR - 2023-10-14 05:50:06 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 234
+ERROR - 2023-10-14 05:50:06 --> 404 Page Not Found: Logo/index
+ERROR - 2023-10-14 05:50:06 --> 404 Page Not Found: Storage/assets_v4
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> file_get_contents(http://localhost/masjid_v2/storage/assets_v4//db/database.json): failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden
+ C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 9
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> scandir(logo/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> scandir(logo/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 27
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> array_values() expects parameter 1 to be array, null given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 28
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> scandir(wallpaper/): The system cannot find the file specified. (code: 2) C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> scandir(wallpaper/): failed to open dir: No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> scandir(): (errno 2): No such file or directory C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> array_diff(): Expected parameter 1 to be an array, bool given C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 33
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 36
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 115
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 141
+ERROR - 2023-10-14 06:11:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 234
+ERROR - 2023-10-14 06:11:42 --> 404 Page Not Found: Logo/index
+ERROR - 2023-10-14 06:11:42 --> 404 Page Not Found: Storage/assets_v4
+ERROR - 2023-10-14 12:14:26 --> Severity: Warning --> cal_days_in_month(): invalid date C:\xampp_74\htdocs\masjid_v2\application\models\M_gzl.php 23
+ERROR - 2023-10-14 12:14:29 --> Severity: Warning --> cal_days_in_month(): invalid date C:\xampp_74\htdocs\masjid_v2\application\models\M_gzl.php 23
+ERROR - 2023-10-14 12:14:31 --> Severity: Warning --> cal_days_in_month(): invalid date C:\xampp_74\htdocs\masjid_v2\application\models\M_gzl.php 23
+ERROR - 2023-10-14 12:38:05 --> Severity: error --> Exception: Call to a member function gen_code() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 37
+ERROR - 2023-10-14 12:38:15 --> Severity: error --> Exception: Call to a member function gen_code() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 37
+ERROR - 2023-10-14 12:38:21 --> Severity: error --> Exception: Call to a member function gen_code() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 37
+ERROR - 2023-10-14 12:38:45 --> Severity: Notice --> Undefined property: Dash::$M_gzl C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 37
+ERROR - 2023-10-14 12:38:45 --> Severity: error --> Exception: Call to a member function gen_code() on null C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 37
+ERROR - 2023-10-14 12:38:54 --> Query error: Unknown column 'id_hadis_quote' in 'field list' - Invalid query: INSERT INTO `t_jadwal_bulanan` (`id_jadwal_bulanan`, `tanggal`, `id_imam_khotib`, `id_kas_masjid`, `id_hadis_quote`, `id_running_text`, `date_g`) VALUES ('JSBK4V615K', '2023-10-06', NULL, NULL, NULL, NULL, '2023-10-14 12:38:54')
+ERROR - 2023-10-14 12:39:03 --> Query error: Column 'id_imam_khotib' cannot be null - Invalid query: INSERT INTO `t_jadwal_bulanan` (`id_jadwal_bulanan`, `tanggal`, `id_imam_khotib`, `id_kas_masjid`, `id_hadist_quote`, `id_running_text`, `date_g`) VALUES ('JSBHZRT40T', '2023-11-03', NULL, NULL, NULL, NULL, '2023-10-14 12:39:03')
+ERROR - 2023-10-14 12:41:39 --> Query error: Table 'db_masjid.development' doesn't exist - Invalid query: SELECT *
+FROM `development`
+WHERE `tanggal` = '2024-01-05'
+ LIMIT 1
+ERROR - 2023-10-14 12:41:41 --> Query error: Table 'db_masjid.development' doesn't exist - Invalid query: SELECT *
+FROM `development`
+WHERE `tanggal` = '2023-12-01'
+ LIMIT 1
+ERROR - 2023-10-14 12:41:42 --> Query error: Table 'db_masjid.development' doesn't exist - Invalid query: SELECT *
+FROM `development`
+WHERE `tanggal` = '2023-11-03'
+ LIMIT 1
+ERROR - 2023-10-14 12:41:44 --> Query error: Table 'db_masjid.development' doesn't exist - Invalid query: SELECT *
+FROM `development`
+WHERE `tanggal` = '2023-12-01'
+ LIMIT 1
+ERROR - 2023-10-14 07:42:58 --> 404 Page Not Found: Imam/JSBEX2UXSS
+ERROR - 2023-10-14 07:43:19 --> 404 Page Not Found: Imam/JSBEX2UXSS
+ERROR - 2023-10-14 07:45:23 --> 404 Page Not Found: Imam/JSBEX2UXSS
+ERROR - 2023-10-14 07:49:16 --> Severity: error --> Exception: Call to undefined method M_jumat::get_data_by_id() C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 28
+ERROR - 2023-10-14 08:10:16 --> Severity: Notice --> Undefined variable: data C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\imam.php 7

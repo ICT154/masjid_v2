@@ -15,6 +15,25 @@ class M_gzl extends CI_Model
     }
 
 
+    function getFridaysInMonthV2($month, $year)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+
+        // Mendapatkan jumlah hari dalam bulan
+        $days_in_month = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+
+        // Mendapatkan tanggal Jumat dalam bulan tertentu
+        $fridays = [];
+        for ($day = 1; $day <= $days_in_month; $day++) {
+            $date = new DateTime("$year-$month-$day");
+            if ($date->format('N') === '5') { // 5 adalah kode untuk hari Jumat
+                $fridays[] = $date->format('Y-m-d');
+            }
+        }
+
+        // Mengambil empat Jumat pertama
+        return $four_fridays = array_slice($fridays, 0, 4);
+    }
 
 
     function formatTanggalIndo($tanggal)

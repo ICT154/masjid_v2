@@ -34,11 +34,11 @@ class Videodisplay extends CI_Controller
 
         $this->load->library('upload', $config);
 
-        if ($this->upload->do_upload('video_setting')) {
+        if ($this->upload->do_upload('videoDisplay')) {
 
             $data_video = array(
-                'id_video_display' => "1",
-                'nama_file' => $this->upload->data('file_name'),
+                'id_video_display' => $this->GZL->gen_code("8", "VD"),
+                'id_jadwal_bulanan' => $this->upload->data('file_name'),
                 'date_g' => date("Y-m-d H:i:s"),
             );
 
@@ -51,11 +51,11 @@ class Videodisplay extends CI_Controller
 
 
             $this->GZL->show_msg('success', 'Video Display Berhasil Diubah !');
-            // redirect('video-setting');
+            redirect('video-setting');
             echo "Upload Video Berhasil";
         } else {
-            $this->GZL->show_msg('danger', 'Video Display Gagal Diubah !');
-            // redirect('video-setting');
+            $this->GZL->show_msg('danger', 'Video Display Gagal Diubah !' . $this->upload->display_errors());
+            redirect('video-setting');
             echo "Upload Video Gagal " . $this->upload->display_errors();
         }
     }

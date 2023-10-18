@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MASJID NURUL IMAN</title>
+    <title>MASJID NURUL ROCHMAN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap'); */
         @import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@500&display=swap');
@@ -55,14 +56,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg text-light" style="background-color: #7bae91; ">
+    <nav class="navbar navbar-expand-lg text-light" style="background-color: #00822c; ">
         <div class="container-fluid ">
             <a class="navbar-brand text-light" href="<?= base_url("auth") ?>">DASBOARD AKUN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse text-light" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav d-none">
                     <li class="nav-item">
                         <a class="nav-link active text-light" aria-current="page" href="<?= base_url("auth") ?>">Home</a>
                     </li>

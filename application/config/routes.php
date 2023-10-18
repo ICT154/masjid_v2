@@ -82,3 +82,38 @@ $route['running-text-sv'] = 'Back/runningteks/running_text_sv';
 $route['video-setting'] = 'Back/videodisplay';
 $route['video-upload-setting'] = 'Back/videodisplay/video_upload_setting';
 /////////////////////////////////////////////////////
+
+
+////////////// DASHBOARD //////////////////////////////
+$route['get-data-by-month'] = 'Back/dash/get_data_by_month';
+$route['imam/(:any)'] = 'Back/dash/imam/$1';
+///////////////////////////////////////////////////////
+
+
+////////////// KAS ///////////////////////////////////
+$route['kas/(:any)'] = 'Back/dash/kas/$1';
+/////////////////////////////////////////////////////
+
+
+////////////// HADIST QUOTE //////////////////////////
+$route['hadist_quote/(:any)'] = 'Back/dash/hadist_quote/$1';
+$route['get-hadist'] = 'Back/dash/get_hadist';
+$route['save-hadist-quote'] = 'Back/dash/save_hadist_quote';
+$route['hapus-hadist/(:any)'] = 'Back/dash/hapus_hadist/$1';
+/////////////////////////////////////////////////////
+
+
+////////////// JADWAL SHOLAT ////////////////////////
+$route['running_text/(:any)'] = 'Back/dash/running_text/$1';
+$route['save-running-text'] = 'Back/dash/save_running_text';
+////////////////////////////////////////////////////
+
+//////////////////// VIDEO DISPLAY ///////////////////
+$route['video_display/(:any)'] = 'Back/dash/video_display/$1';
+$route['save-video-display'] = 'Back/dash/save_video_display';
+
+
+////////////////// SETTTING ////////////////////////
+$route['background'] = 'Back/dash/background';
+$route['save-background-image'] = 'Back/dash/save_background_image';
+$route['hapus_background/(:any)'] = 'Back/dash/hapus_background/$1';

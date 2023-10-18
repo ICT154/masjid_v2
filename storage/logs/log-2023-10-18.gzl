@@ -1,0 +1,67 @@
+ERROR - 2023-10-18 09:28:49 --> 404 Page Not Found: Wallpaper/15822524740.jpg
+ERROR - 2023-10-18 09:28:49 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:29:04 --> 404 Page Not Found: Wallpaper/16972539420.png
+ERROR - 2023-10-18 09:29:14 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:29:20 --> 404 Page Not Found: Wallpaper/16972539770.jpg
+ERROR - 2023-10-18 09:30:21 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:30:21 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:30:21 --> 404 Page Not Found: Wallpaper/15822524740.jpg
+ERROR - 2023-10-18 09:30:37 --> 404 Page Not Found: Wallpaper/16972539420.png
+ERROR - 2023-10-18 09:30:41 --> 404 Page Not Found: Wallpaper/15822524740.jpg
+ERROR - 2023-10-18 09:30:41 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:30:41 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:30:56 --> 404 Page Not Found: Wallpaper/16972539420.png
+ERROR - 2023-10-18 09:31:12 --> 404 Page Not Found: Wallpaper/16972539770.jpg
+ERROR - 2023-10-18 09:32:18 --> 404 Page Not Found: Wallpaper/15822524740.jpg
+ERROR - 2023-10-18 09:32:18 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:32:18 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:32:26 --> 404 Page Not Found: Wallpaper/15822524740.jpg
+ERROR - 2023-10-18 09:32:26 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:32:26 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:32:41 --> 404 Page Not Found: Wallpaper/16972539420.png
+ERROR - 2023-10-18 09:32:56 --> 404 Page Not Found: Wallpaper/16972539770.jpg
+ERROR - 2023-10-18 09:38:30 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:38:30 --> 404 Page Not Found: Wallpaper/15822524740.jpg
+ERROR - 2023-10-18 09:38:34 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:38:46 --> 404 Page Not Found: Wallpaper/16972539420.png
+ERROR - 2023-10-18 09:39:02 --> 404 Page Not Found: Wallpaper/16972539770.jpg
+ERROR - 2023-10-18 09:44:30 --> 404 Page Not Found: Background/index
+ERROR - 2023-10-18 09:44:33 --> 404 Page Not Found: Background/index
+ERROR - 2023-10-18 09:45:16 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 09:45:16 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 09:59:13 --> Severity: error --> Exception: Call to undefined method M_jumat::get_data_background() C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 22
+ERROR - 2023-10-18 09:59:17 --> Severity: error --> Exception: Call to undefined method M_jumat::get_data_background() C:\xampp_74\htdocs\masjid_v2\application\controllers\Back\Dash.php 22
+ERROR - 2023-10-18 10:16:13 --> Query error: Unknown column 'id_background' in 'field list' - Invalid query: INSERT INTO `t_background` (`id_background`, `nama_file`, `date_g`) VALUES ('BGRRHDZ5CN', 'Screenshot_(619).png', '2023-10-18 10:16:13')
+ERROR - 2023-10-18 10:19:19 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\background.php 25
+ERROR - 2023-10-18 10:19:19 --> Severity: Notice --> Undefined property: stdClass::$id C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\background.php 25
+ERROR - 2023-10-18 10:19:51 --> 404 Page Not Found: Hapus_background/BGRJO5V86J
+ERROR - 2023-10-18 10:25:07 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30
+ERROR - 2023-10-18 10:25:07 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30
+ERROR - 2023-10-18 10:25:07 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30
+ERROR - 2023-10-18 10:26:00 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30
+ERROR - 2023-10-18 10:26:00 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30
+ERROR - 2023-10-18 10:26:00 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30
+ERROR - 2023-10-18 10:34:42 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:34:44 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:35:11 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:35:11 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:35:24 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:35:24 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:36:51 --> Severity: Notice --> Undefined variable: dataBackground C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 50
+ERROR - 2023-10-18 10:36:51 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp_74\htdocs\masjid_v2\application\views\display\index_v4.php 50
+ERROR - 2023-10-18 10:36:52 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:36:52 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:37:28 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:37:28 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:38:32 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:38:32 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:39:07 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:39:07 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:45:37 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:45:37 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:47:30 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:47:30 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:49:11 --> 404 Page Not Found: Logo/1697252588.png
+ERROR - 2023-10-18 10:49:11 --> 404 Page Not Found: Img/beep.mp3
+ERROR - 2023-10-18 10:54:35 --> 404 Page Not Found: Storage/assets_v4
+ERROR - 2023-10-18 10:58:03 --> Severity: Notice --> Undefined property: stdClass::$id_background C:\xampp_74\htdocs\masjid_v2\application\views\back\dash\video.php 30

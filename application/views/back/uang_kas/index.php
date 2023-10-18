@@ -6,17 +6,17 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-md-4 mt-3">
                         <span class="badge text-bg-success text-justify">
                             <h5 class="mt-3">Total Masuk : Rp. <?= $this->GZL->number_format($TotalAllPemasukan, 2, ",", ".") ?></h5>
                         </span>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4 mt-3">
                         <span class="badge text-bg-danger text-justify h-100">
-                            <h5 class="mt-3">Total Masuk : Rp. <?= $this->GZL->number_format($TotalAllPengeluaran, 2, ",", ".") ?></h5>
+                            <h5 class="mt-3">Total Pengeluaran : Rp. <?= $this->GZL->number_format($TotalAllPengeluaran, 2, ",", ".") ?></h5>
                         </span>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4 mt-3">
                         <span class="badge text-bg-info text-justify">
                             <h5 class="mt-3">Total Saldo : Rp. <?= $this->GZL->number_format($TotalAllPemasukan - $TotalAllPengeluaran, 2, ",", ".") ?></h5>
                         </span>

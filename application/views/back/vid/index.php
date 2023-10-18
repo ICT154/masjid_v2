@@ -7,7 +7,7 @@
             <div class="card-body">
 
                 <hr>
-                <form id="upload-form" method="post" enctype="multipart/form-data">
+                <form id="upload-formx" method="post" enctype="multipart/form-data" action="<?= base_url("video-upload-setting") ?>">
                     <div class="row">
                         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                         <div class="col">

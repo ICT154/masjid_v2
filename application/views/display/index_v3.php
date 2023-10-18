@@ -129,9 +129,9 @@
             }
 
             ?>
-            <br><br><br>
+            <br><br><br><br><br>
             <div class="row container-lg mr-5">
-                <div class="col card ml-3" id="card-imam" style="margin-left: 25px; height:500px; font-size:35px;">
+                <div class="col card ml-3" id="card-imam" style="margin-left: 76px;height: 618px;font-size: 42px;">
 
 
                     <div class="row mt-3">
@@ -176,15 +176,18 @@
 
                     <div class="row mt-3">
                         <div class="col">
-                            Saldo Sebelumnya
+                            Saldo Awal
                         </div>
                         <div class="col-1">
                             :
                         </div>
                         <div class="col">
-                            Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarin, 0, ',', ".") ?>
+                            21.657.500,00
+                            <!-- Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPemasukan, 0, ',', ".") ?> -->
+                            <!-- Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarin, 0, ',', ".") ?> -->
                         </div>
                     </div>
+
                     <div class="row mt-1">
                         <div class="col">
                             Penerimaan
@@ -193,9 +196,11 @@
                             :
                         </div>
                         <div class="col">
-                            Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPemasukan, 0, ',', ".") ?>
+                            Rp. 1.595.000
+                            <!-- Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPemasukan, 0, ',', ".") ?> -->
                         </div>
                     </div>
+
                     <div class="row mt-1">
                         <div class="col">
                             Pengeluaran
@@ -204,9 +209,13 @@
                             :
                         </div>
                         <div class="col">
-                            Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPengeluaran, 0, ',', ".") ?>
+                            0
+                            <!-- Rp. <?= $this->GZL->number_format($GetSaldoMingguKemarinKemarinPengeluaran, 0, ',', ".") ?> -->
                         </div>
                     </div>
+
+
+
                     <div class="row mt-1">
                         <div class="col">
                             Saldo Akhir
@@ -220,8 +229,8 @@
                     </div>
                 </div>
 
-                <div class="col" id="card-video" style="margin-right:-155px;">
-                    <iframe src="<?= base_url("storage/uploads_docs/" . $DataVideo['nama_file']) ?>" frameborder="0" style="height:500px; width:650px;"></iframe>
+                <div class="col-lg-5" id="card-video" style="margin-right:-155px;">
+                    <iframe src="<?= base_url("storage/uploads_docs/" . $DataVideo['nama_file']) ?>" frameborder="0" style="height: 617px;width: 853px;"></iframe>
                     <!-- <video loop="" autoplay="" muted="" id="vid00" class="kanan0" style="height: 270px;">
                         <source src="<?= base_url("storage/uploads_docs/" . $DataVideo['nama_file']) ?>" type="video/mp4">
                         Your browser does not support the video tag.
