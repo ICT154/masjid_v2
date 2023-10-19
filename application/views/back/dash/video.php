@@ -27,7 +27,7 @@
                                         <div class="embed-responsive embed-responsive-16by9">
                                             <iframe class="embed-responsive-item" src="<?= base_url("storage/uploads_docs/" . $key->nama_file) ?>" allowfullscreen></iframe>
                                         </div>
-                                        <form action="<?= base_url('hapus_background/' . $key->id_background) ?>" method="post">
+                                        <form action="<?= base_url('hapus_video_display/' . $key->id_video_display) ?>" method="post">
                                             <button type="submit" class="btn btn-danger mt-2">Hapus</button>
                                         </form>
                                     </div>

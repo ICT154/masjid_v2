@@ -11,7 +11,7 @@
                 <i class="fa-solid fa-forward"></i>
             </button>
             <!-- <a href="<?= base_url("maps") ?>" class="btn btn-outline-primary mt-1">GANTI LOKASI JADWAL SHOLAT</a> -->
-            <a href="<?= base_url("logo") ?>" class="btn btn-outline-primary mt-1">GANTI LOGO</a>
+            <!-- <a href="<?= base_url("logo") ?>" class="btn btn-outline-primary mt-1">GANTI LOGO</a> -->
             <a href="<?= base_url('background') ?>" class="btn btn-outline-primary mt-1">GANTI GAMBAR BACKGROUND</a>
         </div>
     </div>

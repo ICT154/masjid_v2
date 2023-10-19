@@ -25,6 +25,18 @@ class M_jumat extends CI_Model
     }
 
 
+    function get_data_video_by_id_limit($id)
+    {
+        $this->db->select('*');
+        $this->db->from('t_video_display');
+        $this->db->where('id_jadwal_bulanan', $id);
+        $this->db->order_by('date_g', 'desc');
+        $this->db->limit(1);
+        $query = $this->db->get();
+        $res =  $query->result();
+        return $res;
+    }
+
     function get_data_video_by_id($id)
     {
         $this->db->select('*');

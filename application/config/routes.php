@@ -111,6 +111,9 @@ $route['save-running-text'] = 'Back/dash/save_running_text';
 //////////////////// VIDEO DISPLAY ///////////////////
 $route['video_display/(:any)'] = 'Back/dash/video_display/$1';
 $route['save-video-display'] = 'Back/dash/save_video_display';
+$route['hapus_video_display/(:any)'] = 'Back/dash/hapus_video_display/$1';
+$route['change-video-display'] = 'Back/dash/change_video_display';
+
 
 
 ////////////////// SETTTING ////////////////////////

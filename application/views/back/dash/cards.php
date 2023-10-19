@@ -16,7 +16,7 @@ foreach ($fridays as $friday) {
                     <a class="text-decoration-none" href="<?= base_url("kas/" . $get_data['id_jadwal_bulanan']) ?>"> <?= $this->JUMAT->cekJadwalSesuaiJumat("kas", $friday) ?> </a>
                     <a class="text-decoration-none" href="<?= base_url("hadist_quote/" . $get_data['id_jadwal_bulanan']) ?>"> <?= $this->JUMAT->cekJadwalSesuaiJumat("hadist_quote", $friday) ?></a>
                     <a class="text-decoration-none" href="<?= base_url("running_text/" . $get_data['id_jadwal_bulanan']) ?>"> <?= $this->JUMAT->cekJadwalSesuaiJumat("running_text", $friday) ?></a>
-                    <a class="text-decoration-none" href="<?= base_url("video_display/" . $get_data['id_jadwal_bulanan']) ?>"> <?= $this->JUMAT->cekJadwalSesuaiJumat("video_display", $friday) ?></a>
+                    <!-- <a class="text-decoration-none" href="<?= base_url("video_display/" . $get_data['id_jadwal_bulanan']) ?>"> <?= $this->JUMAT->cekJadwalSesuaiJumat("video_display", $friday) ?></a> -->
                 </ul>
             </div>
         </div>

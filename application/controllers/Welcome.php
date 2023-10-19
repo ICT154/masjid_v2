@@ -49,7 +49,14 @@ class Welcome extends CI_Controller
 			'DataRunningText' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_running_text')->row_array(),
 			'DataVideo' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_video_display')->row_array(),
 			'dataBackground' => $this->JUMAT->get_data_background(),
-			'datahadist' => $this->JUMAT->get_data_hadist_by_id($datax['id_hadist_quote']),
+			'datahadist' => $this->JUMAT->get_data_hadist_by_id($datax['id_hadist_quote']),  'dataRunningTeks' => $this->JUMAT->get_data_running_text_by_id($datax['id_running_text']),
+			"TotalPemasukanMingguIni" => $this->JUMAT->getTotalPemasukanMingguIni($datax['tanggal']),
+			"TotalPemasukanMingguKemarin" => $this->JUMAT->getTotalPemasukanMingguKemarin($datax['tanggal']),
+			"TotalPengeluaranMingguKemaren" => $this->JUMAT->getTotalPengeluaranMingguKemaren($datax['tanggal']),
+			"TotalPengeluaranMingguIni" =>  $this->JUMAT->getTotalPengeluaranMingguIni($datax['tanggal']),
+			"DataSaldoMingguIni" => $this->JUMAT->get_data_saldo_by_tanggal($datax['tanggal']),
+			'datavideo' => $this->JUMAT->get_data_video_by_id_limit($data_jadwal_bulanan['id_jadwal_bulanan']),
+			'dataimam' => $this->JUMAT->get_data_imam_by_id($datax['id_imam_khotib']),
 		);
 
 		if ($arrayName['JumatSekarang'] == $arrayName['JumatSebelumDanSelanjut']['next_friday']) {

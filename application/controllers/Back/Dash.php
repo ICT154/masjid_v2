@@ -15,6 +15,36 @@ class Dash extends CI_Controller
         $this->load->model('M_jumat', 'JUMAT');
     }
 
+    function change_video_display()
+    {
+        $id_jadwal_bulanan = $this->input->post('id');
+        $tanggal = $this->input->post('tanggalVideoDisplay');
+
+        $data_video = $this->db->where("date_g <", $tanggal)->where("id_jadwal_bulanan", $id_jadwal_bulanan)->order_by("date_g", "DESC")->limit(1)->get('t_video_display')->row_array();
+
+        echo "
+       <input type='hidden' id='tanggal_video_display' value='" . $data_video['date_g'] . "'>
+       <input type='hidden' id='id_jadwal_bulanan' value='" . $data_video['id_jadwal_bulanan'] . "'>
+       <iframe id='videoIframe' style='width: 100%; height:100%;' src='" . base_url('/') . "storage/uploads_docs/" . $data_video['nama_file'] . "' frameborder='0' allowfullscreen></iframe>
+       <div></div>
+       ";
+    }
+
+    function hapus_video_display($id)
+    {
+        $this->db->where('id_video_display', $id);
+        $this->db->delete('t_video_display');
+        $this->GZL->show_msg('success', 'Data Berhasil Dihapus ! ');
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            header("Location: " . $_SERVER['HTTP_REFERER']);
+            exit;
+        } else {
+            // Jika referer tidak tersedia, redirect ke halaman lain
+            header("Location: " . base_url("auth"));
+            exit;
+        }
+    }
+
     function hapus_background($id)
     {
         $this->db->where('id_background', $id);

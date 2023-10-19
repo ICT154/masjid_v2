@@ -35,9 +35,26 @@
         <div></div>
     </div>
     <div id="display-sholat" class="full-screen" style="display:none"></div>
-    <div id="display-khutbah" class="full-screen" style="display:none">
+    <div id="display-khutbah" class="full-screen" style="display: none;">
         <div></div>
     </div>
+
+    <?php $no = 1;
+    foreach ($datavideo as $row) : ?>
+        <div id="display-video" class="full-screen" style="display: none;">
+            <input type="hidden" id="tanggal_video_display" value="<?= $row->date_g ?>">
+            <input type="hidden" id="id_jadwal_bulanan" value="<?= $row->id_jadwal_bulanan ?>">
+
+            <iframe id="videoIframe" style="width: 100%; height:100%;" id="videoIframe" src="<?= base_url("/") ?>storage/uploads_docs/<?= $row->nama_file ?>" frameborder="0" allowfullscreen></iframe>
+
+            <!-- <video id="videoIframe" title="Advertisement" style="background-color: rgb(0, 0, 0); position: absolute; width: 640px; height: 360px;" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay="true" muted="muted"></video> -->
+
+
+            <div></div>
+        </div>
+    <?php
+        $no++;
+    endforeach; ?>
 
 
     <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="15000">
@@ -80,7 +97,7 @@
     </div>
     <div id="right-container">
         <div id="quote">
-            <div class="carousel quote-carousel slide" data-ride="carousel" data-interval="5000" data-pause="null">
+            <div id="carouselContainer" class="carousel quote-carousel slide" data-ride="carousel" data-interval="5000" data-pause="null">
                 <div class="carousel-inner">
                     <?php
                     $no = 1;
@@ -105,27 +122,157 @@
                     <?php
                         $no++;
                     endforeach; ?>
+                    <?php
+                    $saldo_akhir = ($TotalPemasukanMingguKemarin - $TotalPengeluaranMingguKemaren) + $TotalPemasukanMingguIni - $TotalPengeluaranMingguIni;
+                    ?>
+                    <div class="item slides">
+                        <div class="hero">
+                            <hgroup>
+                                <div class="text1">KEUANGAN MASJID</div>
+                                <div class="text2">SALDO SEBELUMNYA : Rp. <?= $this->GZL->number_format($TotalPemasukanMingguKemarin - $TotalPengeluaranMingguKemaren, 2, ",", ".") ?> <br> PENERIMAAN : Rp. <?= $this->GZL->number_format($TotalPemasukanMingguIni, 2, ",", ".") ?> <br> PENGELUARAN : Rp. <?= $this->GZL->number_format($TotalPengeluaranMingguIni, 2, ",", ".") ?> <br> SALDO AKHIR : Rp. <?= $this->GZL->number_format($saldo_akhir, 2, ",", ".") ?> </div>
+                                <div class="text3"></div>
+                            </hgroup>
+                        </div>
+                    </div>
 
+                    <div class="item slides">
+                        <div class="hero">
+                            <hgroup>
+                                <div class="text1">Jadwal Imam & Khotib</div>
+                                <div class="text2">Imam : <?= $dataimam['imam'] ?> <br> Khotib : <?= $dataimam['khatib'] ?> </div>
+                                <div class="text3"></div>
+                            </hgroup>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="logo" style="background-image: url(logo/1697252588.png);"></div>
+
+        <div id="logo" style="background-image: url(<?= base_url("storage/assets_v4/") ?>logo/1697252588.png);"></div>
         <div id="running-text">
             <div class="item">
                 <!-- <div class="text"> -->
                 <marquee>
-                    <i class="fa fa-square-o" aria-hidden="true"></i> Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain<i class="fa fa-square-o" aria-hidden="true"></i> Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain<i class="fa fa-square-o" aria-hidden="true"></i> Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain
+                    <i class="fa fa-square-o" aria-hidden="true"></i>
+
+                    <?= $dataRunningTeks['isi'] ?>
+                    <i class="fa fa-square-o" aria-hidden="true"></i>
+
                 </marquee>
                 <!-- </div> -->
             </div>
         </div>
     </div>
+
     <script src="<?= base_url("storage/assets_v4/") ?>js/jquery-3.4.1.min.js"></script>
     <script src="<?= base_url("storage/assets_v4/") ?>js/bootstrap.min.js"></script>
     <script src="<?= base_url("storage/assets_v4/") ?>js/moment-with-locales.js"></script>
     <script src="<?= base_url("storage/assets_v4/") ?>js/PrayTimes.js"></script>
     <script src="<?= base_url("storage/assets_v4/") ?>js/jquery.marquee.js"></script>
+
     <script>
+        // $(document).ready(function() {
+        //     var carouselInner = $('.carousel-inner');
+        //     var lastSlide = carouselInner.children(':last');
+        //     var videoContainer = $('#display-video');
+        //     var videoIframe = $('#videoIframe');
+
+        //     lastSlide.on('transitionend', function() {
+        //         carouselInner.hide();
+        //         videoContainer.show();
+        //         var videoElement = $(videoIframe).contents().find('video').get(0);
+        //         videoElement.play();
+        //         // ganti_video();
+        //     });
+
+        //     $(videoIframe).on('load', function() {
+        //         console.log('Video telah dimuat.');
+        //         var videoElement = $(videoIframe).contents().find('video').get(0);
+        //         videoElement.pause();
+        //         $(videoIframe).contents().find('video').on('ended', function() {
+        //             videoContainer.hide();
+        //             carouselInner.show();
+        //             console.log('Video selesai diputar.');
+        //             ganti_video();
+        //             videoElement.pause();
+        //         });
+        //     });
+        // });
+
+
+        function ganti_video() {
+            var videoContainer = $('#display-video');
+            var videoIframe = $('#videoIframe');
+
+            $.ajax({
+                url: "<?= base_url("change-video-display") ?>",
+                type: "post",
+                data: {
+                    id: $("#id_jadwal_bulanan").val(),
+                    tanggalVideoDisplay: $("#tanggal_video_display").val()
+                },
+                success: function(msg) {
+                    videoContainer.html(msg);
+                    $(videoIframe).on('load', function() {
+                        var videoElement = $(videoIframe).contents().find('video').get(0);
+                        videoElement.pause();
+                    });
+                    // videoContainer.hide();
+                    // carouselContainer.show();
+                    // console.log('Video selesai diputar.');
+                }
+            });
+        }
+    </script>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     var carouselContainer = document.getElementById('carouselContainer');
+        //     var videoContainer = document.getElementById('display-video-1');
+        //     var videoIframe = document.getElementById('videoIframe');
+        //     var carouselInitialized = false;
+
+        //     // Memantau saat semua slide telah dimuat
+        //     carouselContainer.addEventListener('slid.bs.carousel', function() {
+        //         if (!carouselInitialized) {
+        //             carouselInitialized = true;
+        //             // Semua slide telah dimuat, sembunyikan carousel dan tampilkan video
+        //             carouselContainer.style.display = 'none';
+        //             videoContainer.style.display = 'block';
+        //         }
+        //     });
+
+        //     // Memantau saat video selesai diputar
+        //     videoIframe.onload = function() {
+        //         console.log('Video telah dimuat.');
+        //         // Video selesai diputar, tampilkan kembali carousel
+        //         videoIframe.contentWindow.document.getElementsByTagName('video')[0].onended = function() {
+        //             videoContainer.style.display = 'none';
+        //             carouselContainer.style.display = 'block';
+        //             console.log('Video selesai diputar.');
+        //         };
+        //     };
+
+        //     // Cek saat semua slide dimuat
+        //     var carouselInnerElement = carouselContainer.querySelector('.carousel-inner');
+        //     var numberOfCarousels = carouselInnerElement.querySelectorAll('.item.slides').length;
+        //     console.log('Jumlah slide: ' + numberOfCarousels);
+        //     console.log(carouselInnerElement);
+        //     // Semua slide telah dimuat, sembunyikan carousel dan tampilkan video
+        //     if (numberOfCarousels > 0) {
+        //         carouselContainer.style.display = 'none';
+        //         videoContainer.style.display = 'block';
+        //         videoIframe.onload = function() {
+        //             console.log('Video telah dimuat.');
+        //             // Video selesai diputar, tampilkan kembali carousel
+        //             videoIframe.contentWindow.document.getElementsByTagName('video')[0].onended = function() {
+        //                 videoContainer.style.display = 'none';
+        //                 carouselContainer.style.display = 'block';
+        //                 console.log('Video selesai diputar.');
+        //             };
+        //         };
+        //     }
+        // });
         //PrayTimes initialize
         var format = '24h';
         var lat = -6.903272;
@@ -201,20 +348,20 @@
                 // app.showCountDownNextPray();
                 // app.runRightCountDown(app.dhuhr,'Dzuhur');
 
-                $.ajax({
-                    type: "POST",
-                    url: "../proses.php",
-                    dataType: "json",
-                    data: {
-                        id: 'changeDbCheck'
-                    }
-                }).done(function(dt) {
-                    // console.log(dt.data);
-                    if (app.cekDb == false) app.cekDb = dt.data;
-                    else if (app.cekDb !== dt.data) location.reload();
-                }).fail(function(msg) {
-                    console.log(msg);
-                });
+                // $.ajax({
+                //     type: "POST",
+                //     url: "../proses.php",
+                //     dataType: "json",
+                //     data: {
+                //         id: 'changeDbCheck'
+                //     }
+                // }).done(function(dt) {
+                //     // console.log(dt.data);
+                //     if (app.cekDb == false) app.cekDb = dt.data;
+                //     else if (app.cekDb !== dt.data) location.reload();
+                // }).fail(function(msg) {
+                //     console.log(msg);
+                // });
                 // console.log('interval-1000');
             },
             getJadwal: function(jadwalDate) {
