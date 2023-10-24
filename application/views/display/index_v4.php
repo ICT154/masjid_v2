@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body>
+<body id="masjidnurulrochman">
     <div id="preloader">
         <div id="status">&nbsp;</div>
     </div>
@@ -39,22 +39,25 @@
         <div></div>
     </div>
 
-    <?php $no = 1;
-    foreach ($datavideo as $row) : ?>
-        <div id="display-video" class="full-screen" style="display: none;">
-            <input type="hidden" id="tanggal_video_display" value="<?= $row->date_g ?>">
-            <input type="hidden" id="id_jadwal_bulanan" value="<?= $row->id_jadwal_bulanan ?>">
-
-            <iframe id="videoIframe" style="width: 100%; height:100%;" id="videoIframe" src="<?= base_url("/") ?>storage/uploads_docs/<?= $row->nama_file ?>" frameborder="0" allowfullscreen></iframe>
-
-            <!-- <video id="videoIframe" title="Advertisement" style="background-color: rgb(0, 0, 0); position: absolute; width: 640px; height: 360px;" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay="true" muted="muted"></video> -->
-
-
-            <div></div>
-        </div>
     <?php
-        $no++;
-    endforeach; ?>
+    // $no = 1;
+    // foreach ($datavideo as $row) : 
+    ?>
+    <!-- <div id="display-video" class="full-screen" style="display: none;">
+        <input type="hidden" id="tanggal_video_display" value="<?= $row->date_g ?>">
+        <input type="hidden" id="id_jadwal_bulanan" value="<?= $row->id_jadwal_bulanan ?>">
+
+        <iframe id="videoIframe" style="width: 100%; height:100%;" id="videoIframe" src="<?= base_url("/") ?>storage/uploads_docs/<?= $row->nama_file ?>" frameborder="0" allowfullscreen></iframe>
+
+        <video id="videoIframe" title="Advertisement" style="background-color: rgb(0, 0, 0); position: absolute; width: 640px; height: 360px;" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay="true" muted="muted"></video>
+
+
+        <div></div>
+    </div> -->
+    <?php
+    // $no++;
+    // endforeach; 
+    ?>
 
 
     <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="15000">
@@ -149,7 +152,7 @@
         </div>
 
         <div id="logo" style="background-image: url(<?= base_url("storage/assets_v4/") ?>logo/1697252588.png);"></div>
-        <div id="running-text">
+        <div onclick="openFullscreen()" id="running-text">
             <div class="item">
                 <!-- <div class="text"> -->
                 <marquee>
@@ -171,6 +174,46 @@
     <script src="<?= base_url("storage/assets_v4/") ?>js/jquery.marquee.js"></script>
 
     <script>
+        var elem = document.getElementById("masjidnurulrochman");
+        var isFullScreen = false;
+
+        function cekFullScr() {
+            if ((document.fullscreenElement && document.fullscreenElement !== null) ||
+                (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+                (document.msFullscreenElement && document.msFullscreenElement !== null)) {
+                isFullScreen = true;
+                console.log('Elemen berada dalam mode layar penuh.');
+            } else {
+                isFullScreen = false;
+                console.log('Elemen tidak berada dalam mode layar penuh.');
+            }
+        }
+
+        function openFullscreen() {
+            if (isFullScreen) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    /* IE11 */
+                    document.msExitFullscreen();
+                }
+            } else {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                    /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            }
+            setTimeout(cekFullScr, 500);
+        }
+
         // $(document).ready(function() {
         //     var carouselInner = $('.carousel-inner');
         //     var lastSlide = carouselInner.children(':last');
