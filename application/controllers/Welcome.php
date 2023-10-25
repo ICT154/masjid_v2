@@ -73,12 +73,16 @@ class Welcome extends CI_Controller
 		$arrayName['GetSaldoMingguKemarinKemarinPengeluaran'] = $this->KAS->getSaldoMingguanRange($jumat_kemarin_kemarin, $jumat_kemarin, "keluar");
 		$arrayName['GetSaldoMingguKemarinKemarinPemasukan'] = $this->KAS->getSaldoMingguanRange($jumat_kemarin_kemarin, $jumat_kemarin, "masuk");
 
+		// Ambil waktu saat ini
+		$current_time = date("H");
 
-
-		// $this->load->view('templates/header', $arrayName);
-		// $this->load->view('display/index');
-		$this->load->view('display/index_v4', $arrayName);
-		// $this->load->view('templates/footer');
-		// $this->load->view('display/index-js');
+		// Periksa jika waktu masih di bawah jam 11
+		if ($current_time < 11) {
+			$this->load->view('display/index_v4_video', $arrayName);
+		} else {
+			// Tindakan lain jika waktu sudah melewati jam 11
+			// ...
+			$this->load->view('display/index_v4', $arrayName);
+		}
 	}
 }

@@ -267,53 +267,6 @@
     </script>
 
     <script>
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     var carouselContainer = document.getElementById('carouselContainer');
-        //     var videoContainer = document.getElementById('display-video-1');
-        //     var videoIframe = document.getElementById('videoIframe');
-        //     var carouselInitialized = false;
-
-        //     // Memantau saat semua slide telah dimuat
-        //     carouselContainer.addEventListener('slid.bs.carousel', function() {
-        //         if (!carouselInitialized) {
-        //             carouselInitialized = true;
-        //             // Semua slide telah dimuat, sembunyikan carousel dan tampilkan video
-        //             carouselContainer.style.display = 'none';
-        //             videoContainer.style.display = 'block';
-        //         }
-        //     });
-
-        //     // Memantau saat video selesai diputar
-        //     videoIframe.onload = function() {
-        //         console.log('Video telah dimuat.');
-        //         // Video selesai diputar, tampilkan kembali carousel
-        //         videoIframe.contentWindow.document.getElementsByTagName('video')[0].onended = function() {
-        //             videoContainer.style.display = 'none';
-        //             carouselContainer.style.display = 'block';
-        //             console.log('Video selesai diputar.');
-        //         };
-        //     };
-
-        //     // Cek saat semua slide dimuat
-        //     var carouselInnerElement = carouselContainer.querySelector('.carousel-inner');
-        //     var numberOfCarousels = carouselInnerElement.querySelectorAll('.item.slides').length;
-        //     console.log('Jumlah slide: ' + numberOfCarousels);
-        //     console.log(carouselInnerElement);
-        //     // Semua slide telah dimuat, sembunyikan carousel dan tampilkan video
-        //     if (numberOfCarousels > 0) {
-        //         carouselContainer.style.display = 'none';
-        //         videoContainer.style.display = 'block';
-        //         videoIframe.onload = function() {
-        //             console.log('Video telah dimuat.');
-        //             // Video selesai diputar, tampilkan kembali carousel
-        //             videoIframe.contentWindow.document.getElementsByTagName('video')[0].onended = function() {
-        //                 videoContainer.style.display = 'none';
-        //                 carouselContainer.style.display = 'block';
-        //                 console.log('Video selesai diputar.');
-        //             };
-        //         };
-        //     }
-        // });
         //PrayTimes initialize
         var format = '24h';
         var lat = -6.903272;
@@ -576,6 +529,7 @@
                         $('#display-sholat').fadeOut();
                         app.khutbahTimer = false;
                         app.showCountDownNextPray();
+                        location.reload();
                     }, duration * 60 * 1000); // to menit
                 }
             },
