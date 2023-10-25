@@ -33,7 +33,7 @@ class M_jumat extends CI_Model
         $this->db->order_by('date_g', 'desc');
         $this->db->limit(1);
         $query = $this->db->get();
-        $res =  $query->result();
+        $res =  $query->row_array();
         return $res;
     }
 
@@ -42,6 +42,8 @@ class M_jumat extends CI_Model
         $this->db->select('*');
         $this->db->from('t_video_display');
         $this->db->where('id_jadwal_bulanan', $id);
+        $this->db->order_by('date_g', 'desc');
+        $this->db->limit(1);
         $query = $this->db->get();
         $res =  $query->result();
         return $res;

@@ -122,6 +122,7 @@ class Dash extends CI_Controller
         $config['allowed_types'] = 'mp4|avi|mkv|3gp';
         $config['remove_spaces'] = TRUE;
         $config['overwrite'] = TRUE;
+        $config['encrypt_name'] = TRUE;
         $this->load->library('upload', $config);
 
         if ($this->upload->do_upload('videoDisplay')) {

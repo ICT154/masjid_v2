@@ -18,7 +18,8 @@
 
 
 
-                <?php foreach ($datavideo as $key) : ?>
+                <?php
+                foreach ($datavideo as $key) : ?>
                     <div class="mt-3">
                         <div class="row">
                             <div class="col">
@@ -36,9 +37,6 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
-
             </div>
         </div>
     </div>
