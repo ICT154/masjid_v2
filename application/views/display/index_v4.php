@@ -82,10 +82,12 @@
     </div>
 
 
+
     <div id="left-container">
         <div id="jam"></div>
         <div id="tgl"></div>
         <div id="jadwal"></div>
+        <!-- <div id="logo-kiri" style="background-image: url(<?= base_url("storage/assets_v4/") ?>logo/1697252588.png);"></div> -->
     </div>
 
     <div id="right-counter" style="display:none">
@@ -114,8 +116,8 @@
                         <div class="item slides  <?= $active ?>">
                             <div class="hero">
                                 <hgroup>
-                                    <div class="text1"><?= $teks['0'] ?></div>
-                                    <div class="text2"><?= $teks['1'] ?></div>
+                                    <div class="text1" style="font-size:1.9vw;"><?= $teks['0'] ?></div>
+                                    <div class="text2" style="font-size:1.9vw;"><?= $teks['1'] ?></div>
                                     <div class="text3"><?= $teks['2'] ?></div>
                                 </hgroup>
                             </div>
@@ -149,7 +151,7 @@
             </div>
         </div>
 
-        <div id="logo" style="background-image: url(<?= base_url("storage/assets_v4/") ?>logo/1697252588.png);"></div>
+        <div id="logo" style="background-position: left bottom; background-image: url(<?= base_url("storage/assets_v4/") ?>logo/1697252588.png);"></div>
         <div onclick="openFullscreen()" id="running-text">
             <div class="item">
                 <!-- <div class="text"> -->
