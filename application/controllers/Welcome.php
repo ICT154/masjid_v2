@@ -77,7 +77,7 @@ class Welcome extends CI_Controller
 		$current_time = date("H");
 
 		// Periksa jika waktu masih di bawah jam 11
-		if ($current_time < 11) {
+		if ($current_time < 9) {
 			$this->load->view('display/index_v4_video', $arrayName);
 		} else {
 			// Tindakan lain jika waktu sudah melewati jam 11

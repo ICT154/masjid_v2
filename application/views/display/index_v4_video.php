@@ -28,7 +28,7 @@
         function checkTime() {
             var now = new Date();
             var hours = now.getHours();
-            if (hours >= 11) {
+            if (hours >= 9) {
                 location.reload();
             }
         }
