@@ -120,3 +120,17 @@ $route['change-video-display'] = 'Back/dash/change_video_display';
 $route['background'] = 'Back/dash/background';
 $route['save-background-image'] = 'Back/dash/save_background_image';
 $route['hapus_background/(:any)'] = 'Back/dash/hapus_background/$1';
+
+
+
+//////////////// CEK JADWAL SHOLAT //////////////////
+$route['cek-jadwal-sholat'] = 'Back/dash/cek_jadwal_sholat';
+$route['cek-jadwal-sholat-adzan'] = 'Back/dash/cek_jadwal_sholat_adzan';
+$route['cek-jadwal-sholat-iqomah'] = 'Back/dash/cek_jadwal_sholat_iqomah';
+$route['cek-jadwal-sholat-jeda'] = 'Back/dash/cek_jadwal_sholat_jeda';
+
+
+///////////////////// HALAMAN DEPAN ///////////////////////
+$route['adzan'] = 'Front/home/adzan';
+$route['iqomah'] = 'Front/home/iqomah';
+$route['jeda_sholat'] = 'Front/home/jeda_sholat';
