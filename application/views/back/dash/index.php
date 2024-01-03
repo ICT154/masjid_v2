@@ -5,7 +5,7 @@
                 <i class="fa-solid fa-backward"></i>
             </button>
             <button id="currentMonth" class="btn btn-outline-success mt-1" disabled>
-                Oktober 2023
+                <?= date('M') ?> <?= date("Y") ?>
             </button>
             <button class="btn btn-outline-success mt-1" onclick="nextMonth()">
                 <i class="fa-solid fa-forward"></i>
@@ -24,8 +24,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-    var currentMonthIndex = 9; // Index 9 untuk Oktober
-    var currentYear = 2023;
+    var currentMonthIndex = <?= date('m')  ?>; // Index 9 untuk Oktober
+    var currentYear = <?= date("Y") ?>;
 
     function previousMonth() {
         if (currentMonthIndex > 0) {
@@ -128,7 +128,7 @@
             url: "<?= base_url("get-data-by-month") ?>",
             type: "POST",
             data: {
-                month: currentMonthIndex + 1,
+                month: currentMonthIndex,
                 year: currentYear
             },
             success: function(response) {

@@ -76,9 +76,19 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+
+	////////////// INI DATABASE SERVER /////////////
+	// 'username' => 'root',
+	// 'password' => 'EofficeBlud123@@##',
+	// 'database' => 'db_masjid_aljihaad',
+	////////////// INI DATABASE SERVER /////////////
+
+	////////////// INI DATABASE LOCAL /////////////
 	'username' => 'root',
 	'password' => '',
 	'database' => 'db_masjid',
+	////////////// INI DATABASE LOCAL /////////////
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

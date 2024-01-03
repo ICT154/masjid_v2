@@ -4,8 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * 
  */
 
-defined('BASEPATH') or exit('No direct script access allowed');
-
 class M_gzl extends CI_Model
 {
 
@@ -14,6 +12,18 @@ class M_gzl extends CI_Model
     {
     }
 
+
+    function getFridaysInMonthV3($month, $year)
+    {
+        $tanggal_awal = date("$year-$month-01");
+        $tanggal_akhir = date("Y-m-t", strtotime($tanggal_awal));
+
+        $this->db->where('tanggal >=', $tanggal_awal);
+        $this->db->where('tanggal <=', $tanggal_akhir);
+        $this->db->order_by('tanggal', 'asc');
+        $data = $this->db->get('t_jadwal_bulanan')->result_array();
+        return $data;
+    }
 
     function getFridaysInMonthV2($month, $year)
     {

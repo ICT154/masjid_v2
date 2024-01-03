@@ -92,7 +92,7 @@ class Dash extends CI_Controller
             // echo " | Sedang Jeda Sholat";
             $this->redirectToPrayerPage("jeda_sholat");
         } else {
-            // echo " | Tidak ada jadwal | Jam Sekarang " . $jam_sekarang . " | Jam Persiapan Sholat " . $waktu_persiapan_adzan . " | Jam Sholat " . $jam_sholat . " | Jam Iqomah " . $waktu_iqomah . " | Jam Jeda Sholat " . $waktu_jeda_sholat . " | Jam Batas Sholat " . $batas_jam_sholat . " | Jam Sholat Selanjutnya " . $jam_sholat_selanjutnya;
+            echo " | Tidak ada jadwal | Jam Sekarang " . $jam_sekarang . " | Jam Persiapan Sholat " . $waktu_persiapan_adzan . " | Jam Sholat " . $jam_sholat . " | Jam Iqomah " . $waktu_iqomah . " | Jam Jeda Sholat " . $waktu_jeda_sholat . " | Jam Batas Sholat " . $batas_jam_sholat . " | Jam Sholat Selanjutnya " . $jam_sholat_selanjutnya;
         }
     }
 
@@ -486,6 +486,63 @@ class Dash extends CI_Controller
         $this->load->view('back/dash/index-js');
     }
 
+
+    function tambah_tanggal()
+    {
+        $tanggal = $this->input->post('tanggal');
+        if ($tanggal == "") {
+            $this->GZL->show_msg('danger', 'Tanggal Tidak Boleh Kosong ! ');
+            return false;
+        } else {
+
+
+            ///////// CEK TANGGAL 
+            $this->db->where('tanggal', $tanggal);
+            $data = $this->db->get('t_jadwal_bulanan', 1);
+
+            if ($data->num_rows() > 0) {
+                $this->GZL->show_msg('danger', 'Tanggal Sudah Ada ! ');
+                return false;
+            } else {
+
+                /// cek tanggal apakah hari jumat atau bukan
+                $day = date('D', strtotime($tanggal));
+                if ($day != "Fri") {
+                    $this->GZL->show_msg('danger', 'Tanggal Harus Hari Jumat ! ');
+                    return false;
+                } else {
+                    $data = array(
+                        "id_jadwal_bulanan" => $this->GZL->gen_code("7", "JSB"),
+                        "tanggal" => $tanggal,
+                        "date_g" => date("Y-m-d H:i:s")
+                    );
+                    $this->db->insert('t_jadwal_bulanan', $data);
+                    $this->GZL->show_msg('success', 'Data Berhasil Ditambah ! ');
+                    if ($this->db->affected_rows() > 0) {
+                        echo "success";
+                    } else {
+                        echo "error : " . $this->db->error();
+                    }
+                }
+            }
+        }
+    }
+
+    function hapus_tanggal()
+    {
+        $id = $this->input->post('dataid');
+        $this->db->where('id_jadwal_bulanan', $id);
+        $this->db->delete('t_jadwal_bulanan');
+        $this->GZL->show_msg('success', 'Data Berhasil Dihapus ! ');
+        if ($this->db->affected_rows() > 0) {
+            $this->GZL->show_msg('success', 'Data Berhasil Dihapus ! ');
+            echo "success";
+        } else {
+            $this->GZL->show_msg('danger', 'Data Gagal Dihapus ! ');
+            echo "error : " . $this->db->error();
+        }
+    }
+
     function get_data_by_month()
     {
         $month = $this->input->post('month');
@@ -512,6 +569,8 @@ class Dash extends CI_Controller
             }
         }
 
+
+        $jumat = $this->GZL->getFridaysInMonthV3($month, $year);
 
         $data = array(
             'month' => $month,

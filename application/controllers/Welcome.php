@@ -31,12 +31,22 @@ class Welcome extends CI_Controller
 	}
 
 
-	public function indexin_aja()
+	public function indexxxxxxxx()
 	{
 
 		$jumatsekarang =  $this->GZL->getFridayFromDate(date("Y-m-d"));
 		$data_jadwal_bulanan = $this->db->where('tanggal', $jumatsekarang)->get("t_jadwal_bulanan", 1)->row_array();
+
+		// echo "<pre>";
+		// print_r($jumatsekarang);
+		// echo "</pre>";
+
 		$datax = $this->JUMAT->get_data_by_id($data_jadwal_bulanan['id_jadwal_bulanan']);
+
+
+		// echo "<pre>";
+		// print_r($datax);
+		// echo "</pre>";
 
 		$arrayName = array(
 			// 'JadwalSholat' => $this->jadwalSholat->getJadwalSholat(),
@@ -90,8 +100,36 @@ class Welcome extends CI_Controller
 	function index()
 	{
 		$jumatsekarang =  $this->GZL->getFridayFromDate(date("Y-m-d"));
-		$data_jadwal_bulanan = $this->db->where('tanggal', $jumatsekarang)->get("t_jadwal_bulanan", 1)->row_array();
+		$data_jadwal_bulanan = $this->db->where('tanggal', $jumatsekarang)->get("t_jadwal_bulanan", 1);
+
+		if ($data_jadwal_bulanan->num_rows() > 0) {
+			$data_jadwal_bulanan = $data_jadwal_bulanan->row_array();
+		} else {
+			$month = date("M");
+			$year = date("Y");
+			$jumat = $this->GZL->getFridaysInMonthV2($month, $year);
+
+			foreach ($jumat as $key) {
+				$this->db->where('tanggal', $key);
+				$data = $this->db->get('t_jadwal_bulanan', 1);
+
+				if ($data->num_rows() > 0) {
+				} else {
+					$data = array(
+						"id_jadwal_bulanan" => $this->GZL->gen_code("7", "JSB"),
+						"tanggal" => $key,
+						"date_g" => date("Y-m-d H:i:s")
+					);
+					$this->db->insert('t_jadwal_bulanan', $data);
+				}
+			}
+
+			$data_jadwal_bulanan = $this->db->where('tanggal', $jumatsekarang)->get("t_jadwal_bulanan", 1);
+			$data_jadwal_bulanan = $data_jadwal_bulanan->row_array();
+		}
+
 		$datax = $this->JUMAT->get_data_by_id($data_jadwal_bulanan['id_jadwal_bulanan']);
+
 
 		$arrayName = array(
 			// 'JadwalSholat' => $this->jadwalSholat->getJadwalSholat(),
@@ -100,11 +138,12 @@ class Welcome extends CI_Controller
 			'GetImamKhatibSekarang' => $this->jadwalSholat->getImamKhatib($this->GZL->getFridayFromDate(date("Y-m-d"))),
 			'GetImamKhatibSebelumDanSelanjut' => $this->jadwalSholat->getImamKhatib($this->GZL->getPreviousAndNextFriday(date("Y-m-d"))['next_friday']),
 			// 'GetSaldoMingguKemarin' => $this->KAS->getSaldoMingguan($this->jadwalSholat->getImamKhatib($this->GZL->getPreviousAndNextFriday(date("Y-m-d"))['previous_friday'])),
-			// 'GetSaldoMingguIni' => $this->KAS->getSaldoMingguan($this->GZL->getFridayFromDate(date("Y-m-d")))
+			// 'GetSaldoMingguIni' => $this->KAS->getSaldoMingguan($this->GZL->getFridayFromDate(date("Y-m-d"))),
 			'DataRunningText' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_running_text')->row_array(),
 			'DataVideo' => $this->db->order_by("date_g", "DESC")->limit(1)->get('t_video_display')->row_array(),
 			'dataBackground' => $this->JUMAT->get_data_background(),
-			'datahadist' => $this->JUMAT->get_data_hadist_by_id($datax['id_hadist_quote']),  'dataRunningTeks' => $this->JUMAT->get_data_running_text_by_id($datax['id_running_text']),
+			// 'datahadist' => $this->JUMAT->get_data_hadist_by_id($datax['id_hadist_quote']),
+			// 'dataRunningTeks' => $this->JUMAT->get_data_running_text_by_id($datax['id_running_text']),
 			"TotalPemasukanMingguIni" => $this->JUMAT->getTotalPemasukanMingguIni($datax['tanggal']),
 			"TotalPemasukanMingguKemarin" => $this->JUMAT->getTotalPemasukanMingguKemarin($datax['tanggal']),
 			"TotalPengeluaranMingguKemaren" => $this->JUMAT->getTotalPengeluaranMingguKemaren($datax['tanggal']),

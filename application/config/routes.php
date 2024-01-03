@@ -134,3 +134,8 @@ $route['cek-jadwal-sholat-jeda'] = 'Back/dash/cek_jadwal_sholat_jeda';
 $route['adzan'] = 'Front/home/adzan';
 $route['iqomah'] = 'Front/home/iqomah';
 $route['jeda_sholat'] = 'Front/home/jeda_sholat';
+
+
+////////////// TAMBAH TANGGAL JUMAT ///////////////////////
+$route['tambah-tanggal'] = 'Back/dash/tambah_tanggal';
+$route['hapus-tanggal'] = 'Back/dash/hapus_tanggal';

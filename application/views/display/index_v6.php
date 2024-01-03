@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Masjid</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
@@ -72,7 +72,7 @@
             bottom: 0;
             right: 0;
             border-radius: 5px;
-            border: 2px dashed #fff;
+            /* border: 2px dashed #fff; */
         }
 
 
@@ -207,7 +207,7 @@
             margin: 3vh 0 0 0;
             height: 3.5vw;
             width: 75vw;
-            border: 0.2vw dashed #fff;
+            /* border: 0.2vw dashed #fff; */
         }
 
         .teks-hari {
@@ -228,7 +228,7 @@
         }
 
         #bg-image {
-            background-image: url('https://blog.pintu.co.id/wp-content/uploads/2023/06/chatbot-ai-untuk-pecinta-kucing-catgpt.jpg');
+            /* background-image: url('https://blog.pintu.co.id/wp-content/uploads/2023/06/chatbot-ai-untuk-pecinta-kucing-catgpt.jpg'); */
             /* background-image: url('https://placehold.it/360x900'); */
             background-repeat: no-repeat;
             background-size: cover;
@@ -242,7 +242,7 @@
             background-color: #a585a2;
             height: 30vw;
             width: 75vw;
-            border: 0.2vw dashed #fff;
+            /* border: 0.2vw dashed #fff; */
             transition: background-image 1s ease-in-out;
         }
 
@@ -264,7 +264,7 @@
             margin: 3vh 0 0 0;
             height: 3.5vw;
             width: 24vw;
-            border: 0.2vw dashed #fff;
+            /* border: 0.2vw dashed #fff; */
         }
 
         #jadwal-sholat-syuruq {
@@ -279,7 +279,7 @@
             margin: 3vh 0 0 0;
             height: 3.5vw;
             width: 24vw;
-            border: 0.2vw dashed #fff;
+            /* border: 0.2vw dashed #fff; */
         }
 
         #teks-hari-syuruq {
@@ -292,9 +292,9 @@
 <body>
     <main>
         <div id="left-container">
-            <div id="nama-masjid" style="margin: 0vh 0 0 55vh;">Masjid Nurul Rochman
+            <div id="nama-masjid" style="margin: 0vh 0 0 55vh;">Masjid Al - Jihaad
             </div>
-            <div id="nama-masjid" style="font-size: 2vw; margin: 3vh 0 0 0;">Jl. Moch. Toha No.369, Ciseureuh, Kec. Regol, Kota Bandung, Jawa Barat
+            <div id="nama-masjid" style="font-size: 1.8vw; margin: 3vh 0 0 0;"> Jalan Cipta Timur X Rt.03 Rw.11 Kelurahan Bintara, Bekasi Barat, Bekasi 17134
             </div>
 
             <div id="nama-hari" style="font-size: 2vw; margin: 3vh 0 0 0;">
@@ -349,6 +349,7 @@
 
                 </div>
             </div>
+            <img src="<?= base_url("storage/assets_v4/") ?>img/logo-musholla-aljihaad-2.svg" alt="" style='width: 28vw;margin-top: 27vw;'>
         </div>
     </main>
 
@@ -422,11 +423,11 @@
                 }
             });
         }
-        setInterval(cek_jadwal_sholat, 2000);
+        // setInterval(cek_jadwal_sholat, 2000);
 
-        cek_jadwal_sholat();
+        // cek_jadwal_sholat();
 
-        const apiUrl = "https://www.islamicfinder.us/index.php/api/prayer_times?user_ip=103.147.9.227&method=3&time_format=0";
+        const apiUrl = "https://www.islamicfinder.us/index.php/api/prayer_times?latitude=-6.2349&longitude=106.9896&timezone=Asia/Jakarta&method=3&time_format=0";
 
         fetch(apiUrl)
             .then(response => response.json())

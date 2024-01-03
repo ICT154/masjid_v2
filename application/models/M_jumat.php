@@ -41,7 +41,7 @@ class M_jumat extends CI_Model
         } else if ($jam_sekarang >= $dzuhur && $jam_sekarang <= $ashar) {
             // echo " | Sedang Menuju Ashar";
             $waktu_persiapan_adzan = date("H:i", strtotime('-15 minutes', strtotime($ashar)));
-            $waktu_iqomah = date("H:i", strtotime('+10 minutes', strtotime($ashar)));
+            $waktu_iqomah = date("H:i", strtotime('+1 minutes', strtotime($ashar)));
             $waktu_jeda_sholat = date("H:i", strtotime('+20 minutes', strtotime($ashar)));
             $jam_sholat = $ashar;
             $jam_sholat_selanjutnya = $maghrib;
