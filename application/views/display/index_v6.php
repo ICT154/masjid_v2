@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Masjid</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
@@ -292,9 +292,9 @@
 <body>
     <main>
         <div id="left-container">
-            <div id="nama-masjid" style="margin: 0vh 0 0 55vh;">Masjid Al - Jihaad
+            <div id="nama-masjid" style="margin: 0vh 30vh 0 20vh;">MASJID NURUL RAHMAN
             </div>
-            <div id="nama-masjid" style="font-size: 1.8vw; margin: 3vh 0 0 0;"> Jalan Cipta Timur X Rt.03 Rw.11 Kelurahan Bintara, Bekasi Barat, Bekasi 17134
+            <div id="nama-masjid" style="font-size: 2vw; margin: 3vh 0 0 0;">Jl. Moch. Toha No.369, Ciseureuh, Kec. Regol, Kota Bandung, Jawa Barat
             </div>
 
             <div id="nama-hari" style="font-size: 2vw; margin: 3vh 0 0 0;">
@@ -349,7 +349,6 @@
 
                 </div>
             </div>
-            <img src="<?= base_url("storage/assets_v4/") ?>img/logo-musholla-aljihaad-2.svg" alt="" style='width: 28vw;margin-top: 27vw;'>
         </div>
     </main>
 
@@ -357,11 +356,13 @@
         <marquee behavior="" direction="" id="markue">
             <?php
             // Menggunakan null coalescing untuk memastikan variabel memiliki nilai default jika null
-            $saldo_akhir = ($TotalPemasukanMingguKemarin ?? 0) - ($TotalPengeluaranMingguKemaren ?? 0) + ($TotalPemasukanMingguIni ?? 0) - ($TotalPengeluaranMingguIni ?? 0);
+            // $saldo_akhir = (($TotalPemasukanMingguKemarin ?? 0) - ($TotalPengeluaranMingguKemaren ?? 0) + ($TotalPemasukanMingguIni ?? 0)) - ($TotalPengeluaranMingguIni ?? 0);
+
+            $saldo_akhir = ($TotalPemasukanMingguKemarin ?? 0 - $TotalPengeluaranMingguKemaren ?? 0) + ($TotalPemasukanMingguIni ?? 0) + ($TotalPengeluaranMingguIni ?? 0);
             ?>
 
             <?= $DataRunningText['isi'] ?? '' ?> |
-            IMAM : <?= $dataimam['imam'] ?? '' ?> | <?= $dataimam['khatib'] ?? '' ?> |
+            IMAM : <?= $dataimam['imam'] ?? '' ?> | KHOTIB : <?= $dataimam['khatib'] ?? '' ?> |
             SALDO SEBELUMNYA : Rp. <?= $this->GZL->number_format($TotalPemasukanMingguKemarin ?? 0 - $TotalPengeluaranMingguKemaren ?? 0, 2, ",", ".") ?> |
             PENERIMAAN : Rp. <?= $this->GZL->number_format($TotalPemasukanMingguIni ?? 0, 2, ",", ".") ?> |
             PENGELUARAN : Rp. <?= $this->GZL->number_format($TotalPengeluaranMingguIni ?? 0, 2, ",", ".") ?> |
@@ -423,11 +424,11 @@
                 }
             });
         }
-        // setInterval(cek_jadwal_sholat, 2000);
+        setInterval(cek_jadwal_sholat, 2000);
 
-        // cek_jadwal_sholat();
+        cek_jadwal_sholat();
 
-        const apiUrl = "https://www.islamicfinder.us/index.php/api/prayer_times?latitude=-6.2349&longitude=106.9896&timezone=Asia/Jakarta&method=3&time_format=0";
+        const apiUrl = "https://www.islamicfinder.us/index.php/api/prayer_times?user_ip=103.147.9.227&method=3&time_format=0";
 
         fetch(apiUrl)
             .then(response => response.json())

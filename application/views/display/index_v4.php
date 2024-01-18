@@ -151,20 +151,14 @@
             </div>
         </div>
 
-        <div id="logo" style="background-position: left bottom; background-image: url(<?= base_url("storage/assets_v4/") ?>img/logo-musholla-aljihaad-2.svg);"></div>
+        <div id="logo" style="background-position: left bottom; background-image: url(<?= base_url("storage/assets_v4/") ?>logo/1697252588.png);"></div>
         <div onclick="openFullscreen()" id="running-text">
             <div class="item">
                 <!-- <div class="text"> -->
                 <marquee>
                     <i class="fa fa-square-o" aria-hidden="true"></i>
 
-                    <?php
-                    if (isset($dataRunningTeks['isi'])) {
-                        echo $dataRunningTeks['isi'];
-                    } else {
-                        echo "Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain";
-                    }
-                    ?>
+                    <?= $dataRunningTeks['isi'] ?>
                     <i class="fa fa-square-o" aria-hidden="true"></i>
 
                 </marquee>
@@ -324,8 +318,8 @@
         // });
         //PrayTimes initialize
         var format = '24h';
-        var lat = -6.228175470267672;
-        var lng = 106.96229133583317;
+        var lat = -6.903272;
+        var lng = 107.5607545;
         var timeZone = 7;
         var dst = 0;
         prayTimes.setMethod('MWL');
@@ -335,102 +329,7 @@
         //Baris ini ke bawah jika inget nanti pindah ke file terpisah biar rapi......
 
         var app = {
-            db: $.parseJSON(`{
-   "setting": {
-      "nama": "Masjid Al Jihaad",
-      "lokasi": "Bekasi",
-      "latitude": "-6.228175470267672",
-      "longitude": "106.96229133583317",
-      "timeZone": "7",
-      "dst": "0"
-   },
-   "prayTimesMethod": "MWL",
-   "prayTimesAdjust": {
-      "fajr": "20",
-      "dhuhr": "",
-      "asr": "Standard",
-      "maghrib": "",
-      "isha": "18"
-   },
-   "prayTimesTune": {
-      "fajr": 0,
-      "dhuhr": 0,
-      "asr": 0,
-      "maghrib": 0,
-      "isha": 0
-   },
-   "prayName": {
-      "fajr": "Subuh",
-      "dhuhr": "Dzuhur",
-      "asr": "Ashar",
-      "maghrib": "Maghrib",
-      "isha": "Isya'"
-   },
-   "timeName": {
-      "Hours": "Jam",
-      "Minutes": "Menit",
-      "Seconds": "Detik"
-   },
-   "dayName": {
-      "Sunday": "Minggu",
-      "Monday": "Senin",
-      "Tuesday": "Selasa",
-      "Wednesday": "Rabu",
-      "Thursday": "Kamis",
-      "Friday": "Jum'at",
-      "Saturday": "Sabtu"
-   },
-   "monthName": {
-      "January": "Januari",
-      "February": "Februari",
-      "March": "Maret",
-      "April": "April",
-      "May": "Mei",
-      "June": "Juni",
-      "July": "Juli",
-      "August": "Agustus",
-      "September": "September",
-      "October": "Oktober",
-      "November": "November",
-      "December": "Desember"
-   },
-   "timer": {
-      "info": 5,
-      "wallpaper": 15,
-      "wait_adzan": 1,
-      "adzan": 3,
-      "sholat": 20
-   },
-   "iqomah": {
-      "fajr": 10,
-      "dhuhr": 10,
-      "asr": 10,
-      "maghrib": 10,
-      "isha": 10
-   },
-   "jumat": {
-      "active": true,
-      "duration": 60,
-      "text": "Harap diam saat khotib khutbah"
-   },
-   "tarawih": {
-      "active": true,
-      "duration": 180
-   },
-   "info": [
-      [
-         "u0633u064eu0648u064fu0651u0648u0627 u0635u064fu0641u064fu0648u0641u064eu0643u064fu0645u0652 , u0641u064eu0625u0650u0646u064eu0651 u062au064eu0633u0652u0648u0650u064au064eu0629u064e u0627u0644u0635u064eu0651u0641u0650u0651 u0645u0650u0646u0652 u062au064eu0645u064eu0627u0645u0650 u0627u0644u0635u064eu0651u0644u0627u0629u0650",
-         "Luruskanlah shaf-shaf kalian, karena lurusnya shaf adalah kesempurnaan shalat",
-         "HR. Bukhari no.690, Muslim no.433",
-         true
-      ]
-   ],
-   "running_text": [
-      "Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain",
-      "Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain",
-      "Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain"
-   ]
-}`),
+            db: $.parseJSON(`{"setting":{"nama":"Masjid Nurul Rochman","lokasi":"Bandung","latitude":"-6.903272","longitude":"107.5607545","timeZone":"7","dst":"0"},"prayTimesMethod":"MWL","prayTimesAdjust":{"fajr":"20","dhuhr":"","asr":"Standard","maghrib":"","isha":"18"},"prayTimesTune":{"fajr":0,"dhuhr":0,"asr":0,"maghrib":0,"isha":0},"prayName":{"fajr":"Subuh","dhuhr":"Dzuhur","asr":"Ashar","maghrib":"Maghrib","isha":"Isya'"},"timeName":{"Hours":"Jam","Minutes":"Menit","Seconds":"Detik"},"dayName":{"Sunday":"Minggu","Monday":"Senin","Tuesday":"Selasa","Wednesday":"Rabu","Thursday":"Kamis","Friday":"Jum'at","Saturday":"Sabtu"},"monthName":{"January":"Januari","February":"Februari","March":"Maret","April":"April","May":"Mei","June":"Juni","July":"Juli","August":"Agustus","September":"September","October":"Oktober","November":"November","December":"Desember"},"timer":{"info":5,"wallpaper":15,"wait_adzan":1,"adzan":3,"sholat":20},"iqomah":{"fajr":10,"dhuhr":10,"asr":10,"maghrib":10,"isha":10},"jumat":{"active":true,"duration":60,"text":"Harap diam saat khotib khutbah"},"tarawih":{"active":true,"duration":180},"info":[["u0633u064eu0648u064fu0651u0648u0627 u0635u064fu0641u064fu0648u0641u064eu0643u064fu0645u0652 , u0641u064eu0625u0650u0646u064eu0651 u062au064eu0633u0652u0648u0650u064au064eu0629u064e u0627u0644u0635u064eu0651u0641u0650u0651 u0645u0650u0646u0652 u062au064eu0645u064eu0627u0645u0650 u0627u0644u0635u064eu0651u0644u0627u0629u0650","Luruskanlah shaf-shaf kalian, karena lurusnya shaf adalah kesempurnaan shalat","HR. Bukhari no.690, Muslim no.433",true]],"running_text":["Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain","Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain","Sesungguhnya salat itu mencegah dari (perbuatan) keji dan mungkar. Dan (ketahuilah) mengingat Allah (salat) itu lebih besar (keutamaannya dari ibadah yang lain"]}`),
             cekDb: false,
             tglHariIni: '',
             tglBesok: '',
